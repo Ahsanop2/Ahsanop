@@ -9,8 +9,8 @@ function sendToWhatsApp() {
                       "Rank: " + rank + "%0A" +
                       "Extra Info: " + extra + "%0A";
 
-        var whatsappNumber = "923001234567"; // Apna WhatsApp number yahan dalain
-        var whatsappURL = "https://wa.me923182898491/" + whatsappNumber + "?text=" + message;
+        var whatsappNumber = "923182898491"; // Apna WhatsApp number yahan dalain
+        var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
 
         window.open(whatsappURL, "_blank");
     } else {
