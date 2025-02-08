@@ -1,6 +1,6 @@
 // Function to send WhatsApp message when buying an ID
-function buyNow(923182898491) {
-    window.open(`https://wa.me/${number}?text=I%20want%20to%20buy%20a%20Free%20Fire%20ID`, '_blank');
+function buyNow(number) {
+    window.open(`https://wa.me923182898491/${number}?text=I%20want%20to%20buy%20a%20Free%20Fire%20ID`, '_blank');
 }
 
 // Handling the Sell Form Submission
