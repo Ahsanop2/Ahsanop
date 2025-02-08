@@ -1,11 +1,11 @@
-/* Reset some default styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set background image */
+/* Background Image */
 body {
     background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
     background-size: cover;
@@ -15,8 +15,9 @@ body {
     padding: 50px 0;
 }
 
+/* Container */
 .container {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
     border-radius: 10px;
     padding: 20px;
     max-width: 600px;
@@ -33,7 +34,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Style the forms */
+/* Forms */
 form {
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ input[type="text"] {
 
 button {
     padding: 10px;
-    background-color: #25d366; /* WhatsApp green color */
+    background-color: #25d366; /* WhatsApp green */
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -63,8 +64,4 @@ button {
 
 button:hover {
     background-color: #128c7e;
-}
-
-button:focus {
-    outline: none;
 }
