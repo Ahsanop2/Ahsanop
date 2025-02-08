@@ -1,47 +1,66 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://i.imgur.com/K76HOJ5.jpeg'); /* Free Fire image ka link ya local file */
+    background-image: url('https://wallpapercave.com/wp/wp8853890.jpg'); /* Free Fire Background */
     background-size: cover;
     background-position: center;
-    color: white; /* Text white rakhein */
-}
-
-
-header {
-    background-color: #2c3e50;
     color: white;
-    padding: 20px 0;
+    text-align: center;
 }
 
-h1, h2 {
-    margin: 10px;
-}
-
-#sell-form {
-    background-color: white;
-    margin: 20px;
+/* Container Design */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+/* ID Listing Styles */
+.id-list {
+    text-align: left;
+}
+
+.id-item {
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.buy-btn {
+    background: green;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sell Form Styling */
+.sell-form {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+input, select {
+    padding: 10px;
+    width: 90%;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
 button {
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
+    background: orange;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    color: black;
     cursor: pointer;
     font-size: 16px;
-}
-
-button:hover {
-    background-color: #128C7E;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px 0;
-    margin-top: 20px;
+    width: 95%;
 }
