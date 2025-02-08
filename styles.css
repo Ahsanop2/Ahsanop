@@ -1,56 +1,56 @@
-/* 🔥 Free Fire Themed Design */
+/* CSS for styling the website */
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('https://i.imgur.com/K76HOJ5.jpeg'); /* Free Fire Background */
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.imgur.com/K76HOJ5.jpeg'); /* Replace with your Free Fire background image */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* 📦 Container Styling */
 .container {
-    width: 90%;
     max-width: 600px;
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
     border-radius: 10px;
-    margin-top: 50px;
 }
 
-/* 📝 Form Design */
-.form-section {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
 }
 
 input {
+    width: 100%;
     padding: 10px;
-    width: 90%;
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: none;
-    font-size: 16px;
+    background-color: #fff;
 }
 
-/* 🎨 Buttons */
 button {
-    background: linear-gradient(to right, orange, red);
-    padding: 12px;
-    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 18px;
-    width: 95%;
+    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
 }
+
 button:hover {
-    background: linear-gradient(to right, red, orange);
+    background-color: #218838;
 }
