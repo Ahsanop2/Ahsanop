@@ -9,9 +9,9 @@ function sendToWhatsApp() {
                       "LVL: " + level + "%0A" +
                       "TOTEL EVOS: " + rank + "%0A" +
                       "KUCH OR INFO: " + extra + "%0A";
-
-        var whatsappNumber = "923182898491"; // Apna WhatsApp number yahan dalain
-        var whatsappURL = "https://wa.me/923182898491" + whatsappNumber + "?text=" + message;
+ 
+        var whatsappNumber = "923182898491"; // Apna WhatsApp number likhein
+        var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
 
         window.open(whatsappURL, "_blank");
     } else {
