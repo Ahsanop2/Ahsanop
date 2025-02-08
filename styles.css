@@ -1,10 +1,10 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://i.imgur.com/K76HOJ5.jpeg'); /* Free Fire Background */
+    background-image: url('https://wallpapercave.com/wp/wp8853890.jpg'); /* Free Fire Background */
     background-size: cover;
     background-position: center;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -18,29 +18,8 @@ body {
     border-radius: 10px;
 }
 
-/* ID Listing Styles */
-.id-list {
-    text-align: left;
-}
-
-.id-item {
-    padding: 15px;
-    border-bottom: 1px solid gray;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.buy-btn {
-    background: green;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Sell Form Styling */
-.sell-form {
+/* Form Styling */
+.sell-form, .buy-form {
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 10px;
