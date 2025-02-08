@@ -13,7 +13,7 @@ document.getElementById('sellForm').addEventListener('submit', function(event) {
 
     let message = `🔥 Free Fire ID for Sale!\n📌 Level: ${level}\n🔹 Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: $${price}\n📲 Contact: ${sellerNumber}`;
 
-    window.open(`https://wa.me/${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/923182898491${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
 });
 
 // 🎯 BUYER FORM - Send Buyer Request to WhatsApp
@@ -28,5 +28,5 @@ document.getElementById('buyForm').addEventListener('submit', function(event) {
 
     let message = `💰 New Free Fire ID Buyer!\n💵 Budget: $${budget}\n🎯 ID Type: ${type}\n📲 Contact: ${buyerNumber}`;
 
-    window.open(`https://wa.me/${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me03182898491/${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
 });
