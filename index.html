@@ -4,53 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire ID Buy/Sell</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Sell Your Free Fire ID</h1>
-        <form id="sellForm">
-            <!-- Seller Form Fields -->
-            <label for="sell-level">Level:</label>
-            <input type="text" id="sell-level" placeholder="Enter level" required>
+        <h1>Buy/Sell Free Fire IDs</h1>
 
-            <label for="sell-evos">Evos:</label>
-            <input type="text" id="sell-evos" placeholder="Enter evos" required>
+        <h2>Seller Form</h2>
+        <form action="https://api.whatsapp.com/send?phone=923182898491" method="get" target="_blank">
+            <label for="level">Level:</label>
+            <input type="text" id="level" name="level" required>
 
-            <label for="sell-likes">Likes:</label>
-            <input type="text" id="sell-likes" placeholder="Enter likes" required>
+            <label for="evos">Evos:</label>
+            <input type="text" id="evos" name="evos" required>
 
-            <label for="sell-diamonds">Diamonds:</label>
-            <input type="text" id="sell-diamonds" placeholder="Enter diamonds" required>
+            <label for="likes">Likes:</label>
+            <input type="text" id="likes" name="likes" required>
 
-            <label for="sell-price">Price:</label>
-            <input type="text" id="sell-price" placeholder="Enter price" required>
+            <label for="diamonds">Diamonds:</label>
+            <input type="text" id="diamonds" name="diamonds" required>
 
-            <label for="sell-whatsapp">Your WhatsApp Number:</label>
-            <input type="text" id="sell-whatsapp" value="923182898491" required>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Seller Info</button>
         </form>
 
-        <h1>Buy Free Fire ID</h1>
-        <form id="buyForm">
-            <!-- Buyer Form Fields -->
-            <label for="buy-level">Level:</label>
-            <input type="text" id="buy-level" placeholder="Desired Level" required>
+        <h2>Buyer Form</h2>
+        <form action="https://api.whatsapp.com/send?phone=923182898491" method="get" target="_blank">
+            <label for="id-type">ID Type:</label>
+            <input type="text" id="id-type" name="id-type" required>
 
-            <label for="buy-price">Price Range:</label>
-            <input type="text" id="buy-price" placeholder="Enter price range" required>
+            <label for="price-range">Price Range:</label>
+            <input type="text" id="price-range" name="price-range" required>
 
-            <label for="buy-id-type">ID Type (e.g., rare, pro):</label>
-            <input type="text" id="buy-id-type" placeholder="Enter ID type" required>
-
-            <label for="buy-whatsapp">Your WhatsApp Number:</label>
-            <input type="text" id="buy-whatsapp" value="923182898491" required>
-
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Buyer Info</button>
         </form>
     </div>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
