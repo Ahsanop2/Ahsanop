@@ -5,40 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire ID Buy/Sell</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Buy/Sell Free Fire IDs</h1>
 
         <h2>Seller Form</h2>
-        <form action="https://api.whatsapp.com/send?phone=923182898491" method="get" target="_blank">
+        <form id="sellerForm">
             <label for="level">Level:</label>
-            <input type="text" id="level" name="level" required>
+            <input type="text" id="level" required>
 
             <label for="evos">Evos:</label>
-            <input type="text" id="evos" name="evos" required>
+            <input type="text" id="evos" required>
 
             <label for="likes">Likes:</label>
-            <input type="text" id="likes" name="likes" required>
+            <input type="text" id="likes" required>
 
             <label for="diamonds">Diamonds:</label>
-            <input type="text" id="diamonds" name="diamonds" required>
+            <input type="text" id="diamonds" required>
 
             <label for="price">Price:</label>
-            <input type="text" id="price" name="price" required>
+            <input type="text" id="price" required>
 
-            <button type="submit">Submit Seller Info</button>
+            <button type="button" onclick="sendSellerInfo()">Submit Seller Info</button>
         </form>
 
         <h2>Buyer Form</h2>
-        <form action="https://api.whatsapp.com/send?phone=923182898491" method="get" target="_blank">
+        <form id="buyerForm">
             <label for="id-type">ID Type:</label>
-            <input type="text" id="id-type" name="id-type" required>
+            <input type="text" id="id-type" required>
 
             <label for="price-range">Price Range:</label>
-            <input type="text" id="price-range" name="price-range" required>
+            <input type="text" id="price-range" required>
 
-            <button type="submit">Submit Buyer Info</button>
+            <button type="button" onclick="sendBuyerInfo()">Submit Buyer Info</button>
         </form>
     </div>
 </body>
