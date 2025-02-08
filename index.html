@@ -4,30 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire ID Buy & Sell</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Free Fire ID Marketplace</h1>
         <p>Buy & Sell Free Fire Accounts Safely</p>
         
-        <h2>Buy Free Fire IDs</h2>
-        <div class="id-list">
-            <div class="id-item">
-                <h3>Free Fire ID #1</h3>
-                <p>Level: 70 | Evos: 5 | Likes: 10K | Diamonds: 5000</p>
-                <p>Price: $50 - $100</p>
-                <button class="buy-btn" onclick="buyNow('+923182898491')">Buy Now</button>
-            </div>
-            <div class="id-item">
-                <h3>Free Fire ID #2</h3>
-                <p>Level: 85 | Evos: 10 | Likes: 50K | Diamonds: 10000</p>
-                <p>Price: $150 - $250</p>
-                <button class="buy-btn" onclick="buyNow('+923182898491')">Buy Now</button>
-            </div>
-        </div>
-
-        <!-- Sell Form -->
+        <!-- Seller Form -->
         <div class="sell-form">
             <h2>Sell Your Free Fire ID</h2>
             <form id="sellForm">
@@ -36,12 +20,26 @@
                 <input type="text" id="likes" placeholder="Total Likes" required>
                 <input type="text" id="diamonds" placeholder="Total Diamonds" required>
                 <input type="text" id="price" placeholder="Expected Price ($)" required>
-                <input type="text" id="whatsapp" placeholder="Your WhatsApp Number" required>
-                <button type="submit">Submit ID</button>
+                <input type="text" id="sellerWhatsApp" placeholder="Your WhatsApp Number" required>
+                <button type="submit">Submit ID for Sale</button>
+            </form>
+        </div>
+
+        <!-- Buyer Form -->
+        <div class="buy-form">
+            <h2>Buy a Free Fire ID</h2>
+            <form id="buyForm">
+                <input type="text" id="desiredLevel" placeholder="Desired Level (e.g. 50+)" required>
+                <input type="text" id="desiredEvos" placeholder="Desired Evos (e.g. 5+)" required>
+                <input type="text" id="desiredLikes" placeholder="Minimum Likes (e.g. 10K+)" required>
+                <input type="text" id="desiredDiamonds" placeholder="Minimum Diamonds (e.g. 1000+)" required>
+                <input type="text" id="priceRange" placeholder="Price Range ($50 - $200)" required>
+                <input type="text" id="buyerWhatsApp" placeholder="Your WhatsApp Number" required>
+                <button type="submit">Submit Buy Request</button>
             </form>
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Linking JavaScript File -->
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
