@@ -10,7 +10,7 @@ function sendToWhatsApp() {
                       "Extra Info: " + extra + "%0A";
 
         var whatsappNumber = "923182898491"; // Apna WhatsApp number yahan dalain
-        var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
+        var whatsappURL = "https://wa.me/923182898491?text=Hello ff id sale krni ha" + whatsappNumber + "?text=" + message;
 
         window.open(whatsappURL, "_blank");
     } else {
