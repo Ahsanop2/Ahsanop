@@ -1,10 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    background-image: url('background.jpg'); /* Free Fire image ka link ya local file */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text white rakhein */
 }
+
 
 header {
     background-color: #2c3e50;
