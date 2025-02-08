@@ -1,4 +1,4 @@
-/* General Styles */
+/* 🔥 Free Fire Themed Design */
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('https://wallpapercave.com/wp/wp8853890.jpg'); /* Free Fire Background */
@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-/* Container */
+/* 📦 Container Styling */
 .container {
     width: 90%;
     max-width: 600px;
@@ -18,52 +18,39 @@ body {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+    margin-top: 50px;
 }
 
-/* Form Box */
-.form-box {
-    background: rgba(255, 255, 255, 0.1);
+/* 📝 Form Design */
+.form-section {
+    background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 10px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-/* Input Fields */
 input {
-    width: 90%;
     padding: 10px;
-    margin: 10px 0;
-    border: none;
+    width: 90%;
+    margin: 5px 0;
     border-radius: 5px;
+    border: none;
     font-size: 16px;
 }
 
-/* Buttons */
-.sell-btn {
-    background: red;
-    color: white;
+/* 🎨 Buttons */
+button {
+    background: linear-gradient(to right, orange, red);
     padding: 12px;
     border: none;
-    font-size: 18px;
-    cursor: pointer;
-    width: 95%;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.buy-btn {
-    background: green;
     color: white;
-    padding: 12px;
-    border: none;
-    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    font-size: 18px;
     width: 95%;
     border-radius: 5px;
-    font-weight: bold;
+    margin-top: 10px;
 }
-
-.sell-btn:hover, .buy-btn:hover {
-    opacity: 0.8;
+button:hover {
+    background: linear-gradient(to right, red, orange);
 }
