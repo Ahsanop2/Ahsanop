@@ -3,38 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Account Sale Ahsan op Tersted dealer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Free Fire ID Market</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp8853890.jpg'); /* Free Fire Background */
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        .id-item {
+            padding: 10px;
+            border-bottom: 1px solid gray;
+        }
+        .buy-btn {
+            background: green;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .sell-form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        input, select {
+            padding: 8px;
+            width: 90%;
+            margin: 5px;
+        }
+        button {
+            background: orange;
+            padding: 8px;
+            border: none;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Ahsan op Free Fire Account Saler </h1>
-        <p>Ahsan op Free Fire top Saller</p>
-    </header>
+    <div class="container">
+        <h1>Free Fire ID Buy & Sell</h1>
+        
+        <h2>Buy Free Fire IDs</h2>
+        <div class="id-item">
+            <h3>Free Fire ID #1</h3>
+            <p>Level: 70 | Evos: 5 | Likes: 10K | Diamonds: 5000</p>
+            <p>Price: $50 - $100</p>
+            <button class="buy-btn" onclick="buyNow('+1234567890')">Buy Now</button>
+        </div>
+        <div class="id-item">
+            <h3>Free Fire ID #2</h3>
+            <p>Level: 85 | Evos: 10 | Likes: 50K | Diamonds: 10000</p>
+            <p>Price: $150 - $250</p>
+            <button class="buy-btn" onclick="buyNow('+1234567890')">Buy Now</button>
+        </div>
 
-    <section id="sell-form">
-        <h2>Sell Your Free Fire Account</h2>
-        <form id="ff-form">
-            <label for="level">Account Level:</label>
-            <input type="number" id="level" name="level" required>
+        <!-- Sell Form -->
+        <div class="sell-form">
+            <h2>Sell Your Free Fire ID</h2>
+            <form id="sellForm">
+                <input type="text" id="level" placeholder="Enter Level" required>
+                <input type="text" id="evos" placeholder="Evos Count" required>
+                <input type="text" id="likes" placeholder="Total Likes" required>
+                <input type="text" id="diamonds" placeholder="Total Diamonds" required>
+                <input type="text" id="price" placeholder="Expected Price ($)" required>
+                <input type="text" id="whatsapp" placeholder="Your WhatsApp Number" required>
+                <button type="submit">Submit ID</button>
+            </form>
+        </div>
+    </div>
 
-            <label for="rank">Account Evos:</label>
-            <input type="text" id="rank" name="rank" required>
+    <script>
+        function buyNow(number) {
+            window.open(`https://wa.me/${number}?text=I%20want%20to%20buy%20a%20Free%20Fire%20ID`, '_blank');
+        }
 
-            <label for="extra">kuch Extra Info:</label>
-            <textarea id="extra" name="extra" required></textarea>
+        document.getElementById('sellForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let level = document.getElementById('level').value;
+            let evos = document.getElementById('evos').value;
+            let likes = document.getElementById('likes').value;
+            let diamonds = document.getElementById('diamonds').value;
+            let price = document.getElementById('price').value;
+            let whatsapp = document.getElementById('whatsapp').value;
 
-            <label for="image">Apni Account Image apload kare:</label>
-            <input type="file" id="image" accept="image/*">
+            let message = `New Free Fire ID for Sale!\nLevel: ${level}\nEvos: ${evos}\nLikes: ${likes}\nDiamonds: ${diamonds}\nPrice: $${price}\nWhatsApp: ${whatsapp}`;
+            
+            window.open(`https://wa.me/YOUR_WHATSAPP_NUMBER?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    </script>
 
-            <button type="button" onclick="sendToWhatsApp()">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Free Fire Account Sales. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
