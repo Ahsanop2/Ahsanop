@@ -9,7 +9,7 @@ document.getElementById('sellForm').addEventListener('submit', function(event) {
     let price = document.getElementById('sell-price').value;
     let sellerNumber = document.getElementById('sell-whatsapp').value;
 
-    let adminWhatsApp = "+923001234567"; // 👈 Yahan Apna WhatsApp Number Daalain
+    let adminWhatsApp = "+923182898491"; // 👈 Yahan Apna WhatsApp Number Daalain
 
     let message = `🔥 Free Fire ID for Sale!\n📌 Level: ${level}\n🔹 Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: $${price}\n📲 Contact: ${sellerNumber}`;
 
@@ -24,7 +24,7 @@ document.getElementById('buyForm').addEventListener('submit', function(event) {
     let type = document.getElementById('buy-type').value;
     let buyerNumber = document.getElementById('buy-whatsapp').value;
 
-    let adminWhatsApp = "+923001234567"; // 👈 Yahan Apna WhatsApp Number Daalain
+    let adminWhatsApp = "+923182898491"; // 👈 Yahan Apna WhatsApp Number Daalain
 
     let message = `💰 New Free Fire ID Buyer!\n💵 Budget: $${budget}\n🎯 ID Type: ${type}\n📲 Contact: ${buyerNumber}`;
 
