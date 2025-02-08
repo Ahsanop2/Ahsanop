@@ -1,41 +1,81 @@
-// Seller Form Submission
-document.getElementById('sellForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+/* CSS for styling the website */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.imgur.com/K76HOJ5.jpeg'); /* Replace with your Free Fire background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-    // Get form data
-    let level = document.getElementById('sell-level').value;
-    let evos = document.getElementById('sell-evos').value;
-    let likes = document.getElementById('sell-likes').value;
-    let diamonds = document.getElementById('sell-diamonds').value;
-    let price = document.getElementById('sell-price').value;
-    let sellerNumber = document.getElementById('sell-whatsapp').value;
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    border-radius: 10px;
+}
 
-    // Prepare message for WhatsApp
-    let message = `🔥 Free Fire ID for Sale!\n\n📌 Level: ${level}\n🔹 Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: $${price}\n📲 Contact: ${sellerNumber}`;
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
 
-    // Encode the message to handle spaces and special characters
-    let encodedMessage = encodeURIComponent(message);
+h3 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
 
-    // Open WhatsApp with the encoded message
-    window.open(`https://wa.me/923182898491?text=${encodedMessage}`, '_blank');
-});
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
 
-// Buyer Form Submission
-document.getElementById('buyForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
 
-    // Get form data
-    let level = document.getElementById('buy-level').value;
-    let price = document.getElementById('buy-price').value;
-    let idType = document.getElementById('buy-id-type').value;
-    let buyerNumber = document.getElementById('buy-whatsapp').value;
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    // Prepare message for WhatsApp
-    let message = `💎 Buyer Information:\n\n📌 Desired Level: ${level}\n💰 Price Range: ${price}\n🔍 ID Type: ${idType}\n📲 Contact: ${buyerNumber}`;
+button:hover {
+    background-color: #218838;
+}
 
-    // Encode the message to handle spaces and special characters
-    let encodedMessage = encodeURIComponent(message);
+form {
+    margin-bottom: 40px;
+}
 
-    // Open WhatsApp with the encoded message
-    window.open(`https://wa.me/923182898491?text=${encodedMessage}`, '_blank');
-});
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
