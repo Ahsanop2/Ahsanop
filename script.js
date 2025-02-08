@@ -1,7 +1,8 @@
-// Seller Form Example
+// JavaScript for handling form submission and sending details to WhatsApp
 document.getElementById('sellForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // Get form data
     let level = document.getElementById('sell-level').value;
     let evos = document.getElementById('sell-evos').value;
     let likes = document.getElementById('sell-likes').value;
@@ -9,10 +10,10 @@ document.getElementById('sellForm').addEventListener('submit', function(event) {
     let price = document.getElementById('sell-price').value;
     let sellerNumber = document.getElementById('sell-whatsapp').value;
 
-    // Custom message for WhatsApp
+    // Prepare message for WhatsApp
     let message = `🔥 Free Fire ID for Sale!\n📌 Level: ${level}\n🔹 Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: $${price}\n📲 Contact: ${sellerNumber}`;
 
-    // Encoding the message to handle spaces and special characters
+    // Encode the message to handle spaces and special characters
     let encodedMessage = encodeURIComponent(message);
 
     // Open WhatsApp with the encoded message
