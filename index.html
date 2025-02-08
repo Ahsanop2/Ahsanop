@@ -12,29 +12,23 @@
         <p>Buy and Sell Free Fire Accounts</p>
     </header>
 
-    <section id="account-info">
-        <h2>Account Details</h2>
-        <p>Account Level: 70</p>
-        <p>Skins: Legendary</p>
-        <p>Top Up Amount: 5000 Diamonds</p>
-        <p>Rank: Heroic</p>
+    <section id="sell-form">
+        <h2>Sell Your Free Fire Account</h2>
+        <form id="ff-form">
+            <label for="level">Account Level:</label>
+            <input type="number" id="level" name="level" required>
 
-        <!-- Account Image -->
-        <img src="account-image.jpg" alt="Account Image" id="account-image" class="image-upload">
+            <label for="rank">Account Rank:</label>
+            <input type="text" id="rank" name="rank" required>
 
-        <!-- Image Upload Section -->
-        <h3>Apni id ki pic daale</h3>
-        <input type="file" id="imageInput" accept="image/*">
-        <br>
-        <img id="imagePreview" src="" alt="Image Preview" style="display:none; max-width: 100%; margin-top: 20px;">
-    </section>
+            <label for="extra">Extra Info:</label>
+            <textarea id="extra" name="extra" required></textarea>
 
-    <section id="contact-info">
-        <h2>Contact Details</h2>
-        <p>If you're interested in purchasing or selling Free Fire accounts, contact us on WhatsApp!</p>
-        <a href="https://wa.me/923182898491" target="_blank">
-            <button>Contact on WhatsApp</button>
-        </a>
+            <label for="image">Upload Account Image:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="button" onclick="sendToWhatsApp()">Submit</button>
+        </form>
     </section>
 
     <footer>
