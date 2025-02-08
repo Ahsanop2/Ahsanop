@@ -1,4 +1,4 @@
-// 🚀 SELLER FORM - Send Seller Details to WhatsApp
+// Seller Form Example
 document.getElementById('sellForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -9,24 +9,12 @@ document.getElementById('sellForm').addEventListener('submit', function(event) {
     let price = document.getElementById('sell-price').value;
     let sellerNumber = document.getElementById('sell-whatsapp').value;
 
-    let adminWhatsApp = "+923182898491"; // 👈 Yahan Apna WhatsApp Number Daalain
-
+    // Custom message for WhatsApp
     let message = `🔥 Free Fire ID for Sale!\n📌 Level: ${level}\n🔹 Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: $${price}\n📲 Contact: ${sellerNumber}`;
 
-    window.open(`https://wa.me/923182898491 ${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
-});
+    // Encoding the message to handle spaces and special characters
+    let encodedMessage = encodeURIComponent(message);
 
-// 🎯 BUYER FORM - Send Buyer Request to WhatsApp
-document.getElementById('buyForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let budget = document.getElementById('buy-price').value;
-    let type = document.getElementById('buy-type').value;
-    let buyerNumber = document.getElementById('buy-whatsapp').value;
-
-    let adminWhatsApp = "+923182898491"; // 👈 Yahan Apna WhatsApp Number Daalain
-
-    let message = `💰 New Free Fire ID Buyer!\n💵 Budget: $${budget}\n🎯 ID Type: ${type}\n📲 Contact: ${buyerNumber}`;
-
-    window.open(`https://wa.me03182898491/${adminWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
+    // Open WhatsApp with the encoded message
+    window.open(`https://wa.me/923182898491?text=${encodedMessage}`, '_blank');
 });
