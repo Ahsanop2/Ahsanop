@@ -1,37 +1,42 @@
-// Seller Form Submission
-document.getElementById('sellerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+  const transactionTypeRadios = document.querySelectorAll('input[name="transactionType"]');
+  const saleOptions = document.getElementById("saleOptions");
+  const buyOptions = document.getElementById("buyOptions");
+  
+  // Toggle form sections based on Sale/Buy selection
+  transactionTypeRadios.forEach(radio => {
+    radio.addEventListener("change", function() {
+      if (this.value === "sale") {
+        saleOptions.style.display = "block";
+        buyOptions.style.display = "none";
+      } else {
+        saleOptions.style.display = "none";
+        buyOptions.style.display = "block";
+      }
+    });
+  });
 
-    let name = document.getElementById('seller-name').value;
-    let level = document.getElementById('seller-level').value;
-    let evos = document.getElementById('seller-evos').value;
-    let likes = document.getElementById('seller-likes').value;
-    let info = document.getElementById('seller-info').value;
+  // Form Submission
+  document.getElementById("freeFireForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    let message = `*New Seller Submission*%0A%0A` +
-                  `*Name:* ${name}%0A` +
-                  `*Level:* ${level}%0A` +
-                  `*Evos:* ${evos}%0A` +
-                  `*Likes:* ${likes}%0A` +
-                  `*Other Info:* ${info}%0A`;
+    const transactionType = document.querySelector('input[name="transactionType"]:checked').value;
+    const userWhatsapp = document.getElementById("userWhatsapp").value;
+    
+    let message = `Free Fire ID ${transactionType.toUpperCase()} Request\n\n`;
 
-    let whatsappURL = `https://wa.me/03182898491?text=${message}`;
-    window.open(whatsappURL, '_blank');
-});
+    if (transactionType === "sale") {
+      message += `Level: ${document.getElementById("saleLevel").value}\n`;
+      message += `Evos: ${document.getElementById("saleEvos").value}\n`;
+      message += `Likes: ${document.getElementById("saleLikes").value}\n`;
+      message += `Info: ${document.getElementById("saleInfo").value}\n`;
+    } else {
+      message += `Price Range: ${document.getElementById("buyRange").value}\n`;
+      message += `Required Level: ${document.getElementById("buyLevel").value}\n`;
+      message += `Other Info: ${document.getElementById("buyInfo").value}\n`;
+    }
 
-// Buyer Form Submission
-document.getElementById('buyerForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    let range = document.getElementById('buyer-range').value;
-    let level = document.getElementById('buyer-level').value;
-    let info = document.getElementById('buyer-info').value;
-
-    let message = `*New Buyer Request*%0A%0A` +
-                  `*Price Range:* ${range}%0A` +
-                  `*Required Level:* ${level}%0A` +
-                  `*Other Requirements:* ${info}%0A`;
-
-    let whatsappURL = `https://wa.me/03182898491?text=${message}`;
-    window.open(whatsappURL, '_blank');
+    const whatsappLink = `https://wa.me/923182898401?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, "_blank");
+  });
 });
