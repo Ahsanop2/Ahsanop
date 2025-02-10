@@ -1,32 +1,37 @@
-function sendSellerInfo() {
-    let phone = "923182898491";  // WhatsApp Number
+// Seller Form Submission
+document.getElementById('sellerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    let level = document.getElementById("level").value;
-    let evos = document.getElementById("evos").value;
-    let likes = document.getElementById("likes").value;
-    let diamonds = document.getElementById("diamonds").value;
-    let price = document.getElementById("price").value;
+    let name = document.getElementById('seller-name').value;
+    let level = document.getElementById('seller-level').value;
+    let evos = document.getElementById('seller-evos').value;
+    let likes = document.getElementById('seller-likes').value;
+    let info = document.getElementById('seller-info').value;
 
-    if (level && evos && likes && diamonds && price) {
-        let message = `*Free Fire ID for Sale!*\n\n🔥 Level: ${level}\n⚡ Evos: ${evos}\n❤️ Likes: ${likes}\n💎 Diamonds: ${diamonds}\n💰 Price: ${price}\n\nContact Now!`;
-        let url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    } else {
-        alert("Please fill all fields!");
-    }
-}
+    let message = `*New Seller Submission*%0A%0A` +
+                  `*Name:* ${name}%0A` +
+                  `*Level:* ${level}%0A` +
+                  `*Evos:* ${evos}%0A` +
+                  `*Likes:* ${likes}%0A` +
+                  `*Other Info:* ${info}%0A`;
 
-function sendBuyerInfo() {
-    let phone = "923182898491";  // WhatsApp Number
+    let whatsappURL = `https://wa.me/03182898491?text=${message}`;
+    window.open(whatsappURL, '_blank');
+});
 
-    let idType = document.getElementById("id-type").value;
-    let priceRange = document.getElementById("price-range").value;
+// Buyer Form Submission
+document.getElementById('buyerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    if (idType && priceRange) {
-        let message = `*I want to buy a Free Fire ID!*\n\n🎯 ID Type: ${idType}\n💵 Price Range: ${priceRange}\n\nPlease contact me ASAP!`;
-        let url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    } else {
-        alert("Please fill all fields!");
-    }
-}
+    let range = document.getElementById('buyer-range').value;
+    let level = document.getElementById('buyer-level').value;
+    let info = document.getElementById('buyer-info').value;
+
+    let message = `*New Buyer Request*%0A%0A` +
+                  `*Price Range:* ${range}%0A` +
+                  `*Required Level:* ${level}%0A` +
+                  `*Other Requirements:* ${info}%0A`;
+
+    let whatsappURL = `https://wa.me/03182898491?text=${message}`;
+    window.open(whatsappURL, '_blank');
+});
