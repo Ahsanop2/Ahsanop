@@ -24,6 +24,11 @@ form {
 }
 
 /* Heading Styles */
+h1 {
+  color: #ff0;
+  font-size: 2.5em;
+}
+
 h2, h3 {
   color: #ff0;
   font-size: 1.5em;
@@ -58,6 +63,32 @@ button {
 
 button:hover {
   background: #f00;
+}
+
+/* Payment Info */
+.payment-info {
+  font-size: 1.5em;
+  color: #ff0;
+}
+
+.payment-number {
+  color: #ff0000; /* Payment number color */
+  font-weight: bold;
+}
+
+/* Live Chat Button */
+#liveChatButton {
+  background-color: #008CBA;
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#liveChatButton:hover {
+  background-color: #005f6b;
 }
 
 /* Footer */
