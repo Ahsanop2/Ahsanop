@@ -1,115 +1,74 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body and Background */
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-header h1 {
-  color: #00d1ff;
-  font-size: 2.5rem;
+header {
+  padding: 20px;
+  background: linear-gradient(45deg, #ff0, #f00, #0f0);
+  animation: gradient 5s infinite alternate;
 }
 
-/* Main Content */
-.content {
-  max-width: 800px;
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: #222;
   border-radius: 10px;
+  box-shadow: 0 0 15px #0f0;
 }
 
-/* Form Section */
-.form-section {
-  background: rgba(30, 30, 30, 0.9);
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
+h2, h3 {
+  color: #ff0;
 }
 
-.form-section h3 {
-  color: #00d1ff;
-}
-
-.form-section label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-section input,
-.form-section textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #222;
+  margin: 10px 0;
+  border: 2px solid #0f0;
+  background: #333;
   color: #fff;
 }
 
-.form-section button {
-  background-color: #00d1ff;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.form-section button:hover {
-  background-color: #ff2a68;
-}
-
-/* Contact Section */
-.contact-section {
-  background: rgba(30, 30, 30, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.contact-item {
-  margin-bottom: 15px;
-}
-
-.contact-item h4 {
-  color: #00d1ff;
-}
-
-.contact-item a {
-  color: #ff2a68;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
+button {
+  width: 100%;
   padding: 15px;
+  border: none;
+  background: #ff0;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f00;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+  background: #25D366;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
   margin-top: 20px;
-  font-size: 0.9rem;
+  padding: 10px;
+  background: #111;
+  font-size: 0.8em;
 }
