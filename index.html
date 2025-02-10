@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire ID Buy/Sell</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahsan OP Store</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Buy/Sell Free Fire IDs</h1>
 
-        <h2>Seller Form</h2>
-        <form id="sellerForm">
-            <label for="level">Level:</label>
-            <input type="text" id="level" required>
+  <!-- Header Section -->
+  <header>
+    <h1>Ahsan OP Store</h1>
+  </header>
 
-            <label for="evos">Evos:</label>
-            <input type="text" id="evos" required>
+  <!-- Main Content Section -->
+  <main class="content">
+    <h2>Buy & Sell Free Fire IDs</h2>
+    
+    <!-- Seller Form -->
+    <section class="form-section">
+      <h3>Seller Form</h3>
+      <form id="sellerForm">
+        <label for="seller-name">Name:</label>
+        <input type="text" id="seller-name" required>
 
-            <label for="likes">Likes:</label>
-            <input type="text" id="likes" required>
+        <label for="seller-level">Level:</label>
+        <input type="number" id="seller-level" required>
 
-            <label for="diamonds">Diamonds:</label>
-            <input type="text" id="diamonds" required>
+        <label for="seller-evos">Evos:</label>
+        <input type="text" id="seller-evos" required>
 
-            <label for="price">Price:</label>
-            <input type="text" id="price" required>
+        <label for="seller-likes">Likes:</label>
+        <input type="number" id="seller-likes" required>
 
-            <button type="button" onclick="sendSellerInfo()">Submit Seller Info</button>
-        </form>
+        <label for="seller-info">Other Information:</label>
+        <textarea id="seller-info" rows="3" required></textarea>
 
-        <h2>Buyer Form</h2>
-        <form id="buyerForm">
-            <label for="id-type">ID Type:</label>
-            <input type="text" id="id-type" required>
+        <button type="submit">Submit Seller Info</button>
+      </form>
+    </section>
 
-            <label for="price-range">Price Range:</label>
-            <input type="text" id="price-range" required>
+    <!-- Buyer Form -->
+    <section class="form-section">
+      <h3>Buyer Form</h3>
+      <form id="buyerForm">
+        <label for="buyer-range">Price Range:</label>
+        <input type="text" id="buyer-range" required>
 
-            <button type="button" onclick="sendBuyerInfo()">Submit Buyer Info</button>
-        </form>
-    </div>
+        <label for="buyer-level">Required Level:</label>
+        <input type="number" id="buyer-level" required>
+
+        <label for="buyer-info">Other Requirements:</label>
+        <textarea id="buyer-info" rows="3" required></textarea>
+
+        <button type="submit">Submit Buyer Request</button>
+      </form>
+    </section>
+
+    <!-- Contact & Payment Details -->
+    <section class="contact-section">
+      <h3>Contact Information</h3>
+
+      <div class="contact-item">
+        <h4>WhatsApp:</h4>
+        <a href="https://wa.me/03182898491" target="_blank">03182898491</a>
+      </div>
+
+      <div class="contact-item">
+        <h4>Easypaisa Payment:</h4>
+        <p>03448089399 (Rasool Bakhush)</p>
+      </div>
+
+      <div class="contact-item">
+        <h4>Email for Issues:</h4>
+        <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ahsan OP Store - All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+
 </body>
 </html>
