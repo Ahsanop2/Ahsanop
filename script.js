@@ -38,16 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // WhatsApp Link
     const whatsappLink = `https://wa.me/923182898491?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, "_blank");
 
-    // SMS Notification via API (Twilio/Firebase)
-    fetch("https://YOUR_SMS_API_ENDPOINT", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ number: userWhatsapp, text: message })
-    })
-    .then(response => response.json())
-    .then(data => console.log("SMS Sent:", data))
-    .catch(error => console.error("SMS Error:", error));
+    // Open WhatsApp link to send message
+    window.open(whatsappLink, '_blank');
+  });
+
+  // Live Chat Button Functionality
+  document.getElementById("liveChatButton").addEventListener("click", function() {
+    window.location.href = "https://wa.me/923182898491";  // Link to WhatsApp chat
   });
 });
