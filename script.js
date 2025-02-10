@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const transactionTypeRadios = document.querySelectorAll('input[name="transactionType"]');
   const saleOptions = document.getElementById("saleOptions");
   const buyOptions = document.getElementById("buyOptions");
-  
+
+  // Toggle between Sale and Buy options
   transactionTypeRadios.forEach(radio => {
     radio.addEventListener("change", function() {
       if (this.value === "sale") {
@@ -15,12 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  // Form Submission
   document.getElementById("freeFireForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const transactionType = document.querySelector('input[name="transactionType"]:checked').value;
     const userWhatsapp = document.getElementById("userWhatsapp").value;
-    
+
     let message = `Free Fire ID ${transactionType.toUpperCase()} Request\n`;
 
     if (transactionType === "sale") {
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const whatsappLink = `https://wa.me/923182898401?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
 
-    // SMS Integration (Requires Twilio or Firebase Setup)
+    // SMS Notification via API (Twilio/Firebase)
     fetch("https://YOUR_SMS_API_ENDPOINT", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
