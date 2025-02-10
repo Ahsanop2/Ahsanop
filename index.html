@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahsan OP Store - Free Fire ID Sale & Buy</title>
-  <!-- Gaming style font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,64 +19,62 @@
       <!-- Choose Sale or Buy -->
       <div class="transaction-type">
         <label>
-          <input type="radio" name="transactionType" value="sale" checked>
-          Sell ID
+          <input type="radio" name="transactionType" value="sale" checked> Sell ID
         </label>
         <label>
-          <input type="radio" name="transactionType" value="buy">
-          Buy ID
+          <input type="radio" name="transactionType" value="buy"> Buy ID
         </label>
       </div>
 
-      <!-- Seller Form -->
+      <!-- Seller Options -->
       <div id="saleOptions">
-        <h3>Seller Form</h3>
-        <label>ID Level:</label>
-        <input type="number" id="saleLevel" placeholder="Enter ID level" required>
+        <h3>Seller Information</h3>
+        <label for="saleLevel">ID Level:</label>
+        <input type="number" id="saleLevel" placeholder="Enter your ID level" required>
 
-        <label>Evos:</label>
-        <input type="text" id="saleEvos" placeholder="Enter evos status" required>
+        <label for="saleEvos">Evos:</label>
+        <input type="text" id="saleEvos" placeholder="Enter evos details" required>
 
-        <label>Likes:</label>
-        <input type="text" id="saleLikes" placeholder="Enter likes count" required>
+        <label for="saleLikes">Likes:</label>
+        <input type="text" id="saleLikes" placeholder="Enter likes" required>
 
-        <label>Other Information:</label>
-        <textarea id="saleInfo" placeholder="Additional details"></textarea>
+        <label for="saleInfo">Additional Information:</label>
+        <textarea id="saleInfo" placeholder="Enter extra details"></textarea>
       </div>
 
-      <!-- Buyer Form -->
+      <!-- Buyer Options -->
       <div id="buyOptions" style="display: none;">
-        <h3>Buyer Form</h3>
-        <label>Price Range:</label>
-        <input type="text" id="buyRange" placeholder="Enter your budget" required>
+        <h3>Buyer Requirements</h3>
+        <label for="buyRange">Price Range:</label>
+        <input type="text" id="buyRange" placeholder="Enter price range" required>
 
-        <label>Required Level:</label>
-        <input type="number" id="buyLevel" placeholder="Enter minimum ID level" required>
+        <label for="buyLevel">Required Level:</label>
+        <input type="number" id="buyLevel" placeholder="Minimum ID Level" required>
 
-        <label>Other ID Details:</label>
-        <textarea id="buyInfo" placeholder="Any specific requirement"></textarea>
+        <label for="buyInfo">Other Requirements:</label>
+        <textarea id="buyInfo" placeholder="Describe your ideal ID"></textarea>
       </div>
 
-      <!-- Submit Button -->
+      <!-- Contact Options -->
+      <h3>Contact Information</h3>
+      <label for="userWhatsapp">Your WhatsApp Number:</label>
+      <input type="tel" id="userWhatsapp" placeholder="Enter your WhatsApp number" required>
+
       <button type="submit">Submit</button>
     </form>
+
+    <!-- WhatsApp Contact -->
+    <a href="https://wa.me/923182898401" class="btn-whatsapp" target="_blank">
+      Contact Admin on WhatsApp
+    </a>
+
+    <!-- Report & Email -->
+    <p>Report issues at: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+    <p>Easypaisa Payment: **03448089399** (Rasool Bakhush)</p>
   </main>
 
-  <!-- WhatsApp Contact -->
-  <div class="contact-section">
-    <h3>Contact via WhatsApp</h3>
-    <a class="btn-whatsapp" href="https://wa.me/923182898401" target="_blank">Chat on WhatsApp</a>
-  </div>
-
-  <!-- Report Section -->
-  <div class="report-section">
-    <h3>Report an Issue</h3>
-    <a href="mailto:ahsanop32577@gmail.com">Report via Email</a>
-  </div>
-
-  <!-- Footer -->
   <footer>
-    &copy; 2025 Ahsan OP Store | Payment via Easypaisa: 03448089399 (Rasool Bakhush)
+    &copy; 2025 Ahsan OP Store. All Rights Reserved.
   </footer>
 
   <script src="script.js"></script>
