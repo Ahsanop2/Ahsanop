@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // WhatsApp Link
-    const whatsappLink = `https://wa.me/923182898401?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/923182898491?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
 
     // SMS Notification via API (Twilio/Firebase)
