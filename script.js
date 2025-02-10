@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const saleOptions = document.getElementById("saleOptions");
   const buyOptions = document.getElementById("buyOptions");
   
-  // Toggle form sections based on Sale/Buy selection
   transactionTypeRadios.forEach(radio => {
     radio.addEventListener("change", function() {
       if (this.value === "sale") {
@@ -16,14 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Form Submission
   document.getElementById("freeFireForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const transactionType = document.querySelector('input[name="transactionType"]:checked').value;
     const userWhatsapp = document.getElementById("userWhatsapp").value;
     
-    let message = `Free Fire ID ${transactionType.toUpperCase()} Request\n\n`;
+    let message = `Free Fire ID ${transactionType.toUpperCase()} Request\n`;
 
     if (transactionType === "sale") {
       message += `Level: ${document.getElementById("saleLevel").value}\n`;
@@ -36,7 +34,18 @@ document.addEventListener("DOMContentLoaded", function() {
       message += `Other Info: ${document.getElementById("buyInfo").value}\n`;
     }
 
+    // WhatsApp Link
     const whatsappLink = `https://wa.me/923182898401?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
+
+    // SMS Integration (Requires Twilio or Firebase Setup)
+    fetch("https://YOUR_SMS_API_ENDPOINT", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ number: userWhatsapp, text: message })
+    })
+    .then(response => response.json())
+    .then(data => console.log("SMS Sent:", data))
+    .catch(error => console.error("SMS Error:", error));
   });
 });
