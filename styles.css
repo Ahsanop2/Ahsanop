@@ -1,54 +1,39 @@
 /* Global Styles */
 body {
   font-family: 'Press Start 2P', cursive;
-  background-color: #000;
+  background: url('YOUR_BACKGROUND_IMAGE_LINK') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   text-align: center;
 }
 
-header {
-  padding: 20px;
-  background: linear-gradient(45deg, #ff0, #f00, #0f0);
-  animation: gradient 5s infinite alternate;
-}
-
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
 form {
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 20px auto;
-  padding: 20px;
-  background: #222;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  box-shadow: 0 0 15px #0f0;
-}
-
-h2, h3 {
-  color: #ff0;
+  box-shadow: 0 0 10px #0f0;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  width: 95%;
+  padding: 8px;
+  margin: 8px 0;
   border: 2px solid #0f0;
-  background: #333;
+  background: #222;
   color: #fff;
 }
 
 button {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   border: none;
   background: #ff0;
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
@@ -57,18 +42,9 @@ button:hover {
 
 .btn-whatsapp {
   display: inline-block;
-  margin: 20px;
-  padding: 15px;
+  padding: 10px;
   background: #25D366;
   color: white;
-  font-size: 1.2em;
   text-decoration: none;
   border-radius: 5px;
-}
-
-footer {
-  margin-top: 20px;
-  padding: 10px;
-  background: #111;
-  font-size: 0.8em;
 }
