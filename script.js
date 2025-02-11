@@ -18,7 +18,7 @@ function sendToWhatsApp(formId, type) {
   let encodedMessage = encodeURIComponent(message);
 
   // Correct WhatsApp number format with +92 (Pakistan) code
-  let whatsappURL = `https://wa.me/923182898491?text=${encodedMessage}`;
+  let whatsappURL = `https://wa.me/03182898491?text=${encodedMessage}`;
   window.open(whatsappURL, "_blank");
 }
 
