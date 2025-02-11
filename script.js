@@ -1,6 +1,6 @@
-// Function to send Seller Form data to WhatsApp
+// Seller Form Submission to WhatsApp
 document.getElementById('sellerForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Stop normal form submission
+  e.preventDefault(); // Prevent normal form submission
 
   let name = document.getElementById("seller-name").value.trim();
   let level = document.getElementById("seller-level").value.trim();
@@ -14,9 +14,9 @@ document.getElementById('sellerForm').addEventListener('submit', function (e) {
   window.open(whatsappURL, "_blank");
 });
 
-// Function to send Buyer Form data to WhatsApp
+// Buyer Form Submission to WhatsApp
 document.getElementById('buyerForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Stop normal form submission
+  e.preventDefault(); // Prevent normal form submission
 
   let name = document.getElementById("buyer-name").value.trim();
   let range = document.getElementById("buyer-range").value.trim();
