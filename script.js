@@ -1,31 +1,15 @@
-// Basic JavaScript for Form Validation
+<form id="buyerForm">
+  <label for="buyer-name">Name:</label>
+  <input type="text" id="buyer-name" name="buyer-name" required>
 
-// Function to validate form fields for a given form ID
-function validateForm(formId) {
-  const form = document.getElementById(formId);
-  const inputs = form.querySelectorAll('input, textarea');
-  
-  for (let input of inputs) {
-    if (!input.value.trim()) {
-      alert('Please fill out all the fields in the form.');
-      return false;
-    }
-  }
-  return true;
-}
+  <label for="buyer-range">Price Range / Offer Range:</label>
+  <input type="text" id="buyer-range" name="buyer-range" required>
 
-// Validate Seller Form on submission
-document.getElementById('sellerForm').addEventListener('submit', function(e) {
-  if (!validateForm('sellerForm')) {
-    e.preventDefault(); // Prevent form submission if validation fails
-  }
-});
+  <label for="buyer-level">Required Level:</label>
+  <input type="number" id="buyer-level" name="buyer-level" required>
 
-// Validate Buyer Form on submission
-document.getElementById('buyerForm').addEventListener('submit', function(e) {
-  if (!validateForm('buyerForm')) {
-    e.preventDefault(); // Prevent form submission if validation fails
-  }
-});
+  <label for="buyer-details">Other ID Details:</label>
+  <textarea id="buyer-details" name="buyer-details" rows="3" required></textarea>
 
-// Additional JavaScript functionality can be added here if needed.
+  <button type="button" onclick="sendBuyerInfo()">Submit Buyer Requirements</button>
+</form>
