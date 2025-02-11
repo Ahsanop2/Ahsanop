@@ -3,56 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahsan OP Store - Free Fire ID Sale & Buy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Ahsan OP Store</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>Free Fire ID Sale & Buy</h1>
+    <h1>Ahsan OP Store</h1>
   </header>
 
-  <main>
-    <form id="freeFireForm">
-      <h2>Submit Your ID Details</h2>
+  <!-- Main Content Section -->
+  <main class="content">
+    <h2>Buy & Sell Free Fire IDs</h2>
+    
+    <!-- Seller Form Section -->
+    <section class="form-section">
+      <h3>Seller Form</h3>
+      <form id="sellerForm" action="submit_form.php" method="POST">
+        <label for="seller-name">Name:</label>
+        <input type="text" id="seller-name" name="seller-name" required>
 
-      <div class="transaction-type">
-        <label><input type="radio" name="transactionType" value="sale" checked> Sell ID</label>
-        <label><input type="radio" name="transactionType" value="buy"> Buy ID</label>
+        <label for="seller-level">Level:</label>
+        <input type="number" id="seller-level" name="seller-level" required>
+
+        <label for="seller-evos">Evos:</label>
+        <input type="text" id="seller-evos" name="seller-evos" required>
+
+        <label for="seller-likes">Likes:</label>
+        <input type="number" id="seller-likes" name="seller-likes" required>
+
+        <label for="seller-info">Other Information:</label>
+        <textarea id="seller-info" name="seller-info" rows="3" required></textarea>
+
+        <button type="submit">Submit Seller Info</button>
+      </form>
+    </section>
+
+    <!-- Buyer Form Section -->
+    <section class="form-section">
+      <h3>Buyer Form</h3>
+      <form id="buyerForm" action="submit_form.php" method="POST">
+        <label for="buyer-name">Name:</label>
+        <input type="text" id="buyer-name" name="buyer-name" required>
+
+        <label for="buyer-range">Price Range / Offer Range:</label>
+        <input type="text" id="buyer-range" name="buyer-range" required>
+
+        <label for="buyer-level">Required Level:</label>
+        <input type="number" id="buyer-level" name="buyer-level" required>
+
+        <label for="buyer-details">Other ID Details:</label>
+        <textarea id="buyer-details" name="buyer-details" rows="3" required></textarea>
+
+        <button type="submit">Submit Buyer Requirements</button>
+      </form>
+    </section>
+
+    <!-- Contact Options Section -->
+    <section class="contact-section">
+      <!-- WhatsApp Integration -->
+      <div class="contact-item">
+        <h4>Contact on WhatsApp</h4>
+        <a href="https://wa.me/03182898491" target="_blank">Chat on WhatsApp (03182898491)</a>
       </div>
 
-      <div id="saleOptions">
-        <h3>Seller Information</h3>
-        <input type="number" id="saleLevel" placeholder="ID Level" required>
-        <input type="text" id="saleEvos" placeholder="Evos" required>
-        <input type="text" id="saleLikes" placeholder="Likes" required>
-        <textarea id="saleInfo" placeholder="Additional Info"></textarea>
+      <!-- Payment Information -->
+      <div class="contact-item">
+        <h4>Payment via Easypaisa</h4>
+        <p>Number: 03448089399</p>
+        <p>Name: Rasool Bakhush</p>
       </div>
 
-      <div id="buyOptions" style="display: none;">
-        <h3>Buyer Requirements</h3>
-        <input type="text" id="buyRange" placeholder="Price Range" required>
-        <input type="number" id="buyLevel" placeholder="Required Level" required>
-        <textarea id="buyInfo" placeholder="Other Requirements"></textarea>
+      <!-- Report Issue -->
+      <div class="contact-item">
+        <h4>Report an Issue</h4>
+        <a href="mailto:ahsanop32577@gmail.com">Email: ahsanop32577@gmail.com</a>
       </div>
 
-      <h3>Contact Information</h3>
-      <input type="tel" id="userWhatsapp" placeholder="Your WhatsApp Number" required>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <p>Report: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
-    <p class="payment-info">Easypaisa: <span class="payment-number">03448089399</span> (Rasool Bakhush)</p>
-
-    <!-- Live Chat Button -->
-    <button id="liveChatButton">Live Chat</button>
+      <!-- Live Chat Support -->
+      <div class="contact-item">
+        <h4>Live Chat Support</h4>
+        <a href="https://www.tawk.to/chat/yourchatlink" target="_blank">Open Live Chat</a>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Ahsan OP Store. All Rights Reserved.
+    <p>&copy; 2025 Ahsan OP Store. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
