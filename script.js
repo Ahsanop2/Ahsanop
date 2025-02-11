@@ -1,15 +1,30 @@
-<form id="buyerForm">
-  <label for="buyer-name">Name:</label>
-  <input type="text" id="buyer-name" name="buyer-name" required>
+// Function to send Seller Form data to WhatsApp
+document.getElementById('sellerForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Stop normal form submission
 
-  <label for="buyer-range">Price Range / Offer Range:</label>
-  <input type="text" id="buyer-range" name="buyer-range" required>
+  let name = document.getElementById("seller-name").value.trim();
+  let level = document.getElementById("seller-level").value.trim();
+  let evos = document.getElementById("seller-evos").value.trim();
+  let likes = document.getElementById("seller-likes").value.trim();
+  let info = document.getElementById("seller-info").value.trim();
 
-  <label for="buyer-level">Required Level:</label>
-  <input type="number" id="buyer-level" name="buyer-level" required>
+  let message = `Seller Form Submission:%0AName: ${name}%0ALevel: ${level}%0AEvos: ${evos}%0ALikes: ${likes}%0AOther Info: ${info}`;
+  let whatsappURL = `https://wa.me/03182898491?text=${message}`;
 
-  <label for="buyer-details">Other ID Details:</label>
-  <textarea id="buyer-details" name="buyer-details" rows="3" required></textarea>
+  window.open(whatsappURL, "_blank");
+});
 
-  <button type="button" onclick="sendBuyerInfo()">Submit Buyer Requirements</button>
-</form>
+// Function to send Buyer Form data to WhatsApp
+document.getElementById('buyerForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Stop normal form submission
+
+  let name = document.getElementById("buyer-name").value.trim();
+  let range = document.getElementById("buyer-range").value.trim();
+  let level = document.getElementById("buyer-level").value.trim();
+  let details = document.getElementById("buyer-details").value.trim();
+
+  let message = `Buyer Form Submission:%0AName: ${name}%0APrice Range: ${range}%0ARequired Level: ${level}%0AOther Details: ${details}`;
+  let whatsappURL = `https://wa.me/03182898491?text=${message}`;
+
+  window.open(whatsappURL, "_blank");
+});
