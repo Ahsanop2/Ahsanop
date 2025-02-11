@@ -1,98 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahsan OP Store</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Header Section -->
-  <header>
-    <h1>Ahsan OP Store</h1>
-  </header>
+<form id="sellerForm">
+  <label for="seller-name">Name:</label>
+  <input type="text" id="seller-name" name="seller-name" required>
 
-  <!-- Main Content Section -->
-  <main class="content">
-    <h2>Buy & Sell Free Fire IDs</h2>
-    
-    <!-- Ff IDS SALE KE LIYE INFO DE Section -->
-    <section class="form-section">
-      <h3>Seller Form</h3>
-      <form id="sellerForm" action="submit_form.php" method="POST">
-        <label for="seller-name">Name:</label>
-        <input type="text" id="seller-name" name="seller-name" required>
+  <label for="seller-level">Level:</label>
+  <input type="number" id="seller-level" name="seller-level" required>
 
-        <label for="seller-level">Level:</label>
-        <input type="number" id="seller-level" name="seller-level" required>
+  <label for="seller-evos">Evos:</label>
+  <input type="text" id="seller-evos" name="seller-evos" required>
 
-        <label for="seller-evos">Evos:</label>
-        <input type="text" id="seller-evos" name="seller-evos" required>
+  <label for="seller-likes">Likes:</label>
+  <input type="number" id="seller-likes" name="seller-likes" required>
 
-        <label for="seller-likes">Likes:</label>
-        <input type="number" id="seller-likes" name="seller-likes" required>
+  <label for="seller-info">Other Information:</label>
+  <textarea id="seller-info" name="seller-info" rows="3" required></textarea>
 
-        <label for="seller-info">Other Information:</label>
-        <textarea id="seller-info" name="seller-info" rows="3" required></textarea>
-
-        <button type="submit">Submit Seller Info</button>
-      </form>
-    </section>
-
-    <!--ID BUY KE INFO DE  -->
-    <section class="form-section">
-      <h3>Buyer Form</h3>
-      <form id="buyerForm" action="submit_form.php" method="POST">
-        <label for="buyer-name">Name:</label>
-        <input type="text" id="buyer-name" name="buyer-name" required>
-
-        <label for="buyer-range">Price Range / Offer Range:</label>
-        <input type="text" id="buyer-range" name="buyer-range" required>
-
-        <label for="buyer-level">Required Level:</label>
-        <input type="number" id="buyer-level" name="buyer-level" required>
-
-        <label for="buyer-details">Other ID Details:</label>
-        <textarea id="buyer-details" name="buyer-details" rows="3" required></textarea>
-
-        <button type="submit">Submit Buyer Requirements</button>
-      </form>
-    </section>
-
-    <!-- Contact Options Section -->
-    <section class="contact-section">
-      <!-- WhatsApp Integration -->
-      <div class="contact-item">
-        <h4>Contact on WhatsApp</h4>
-        <a href="https://wa.me/03182898491" target="_blank">Chat on WhatsApp (03182898491)</a>
-      </div>
-
-      <!-- Payment Information -->
-      <div class="contact-item">
-        <h4>Payment via Easypaisa</h4>
-        <p>Number: 03448089399</p>
-        <p>Name: Rasool Bakhush</p>
-      </div>
-
-      <!-- Report Issue -->
-      <div class="contact-item">
-        <h4>Report an Issue</h4>
-        <a href="mailto:ahsanop32577@gmail.com">Email: ahsanop32577@gmail.com</a>
-      </div>
-
-      <!-- Live Chat Support -->
-      <div class="contact-item">
-        <h4>Live Chat Support</h4>
-        <a href="https://www.tawk.to/chat/yourchatlink" target="_blank">Open Live Chat</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Ahsan OP Store. All rights reserved.</p>
-  </footer>
-
-  <script src="scripts.js"></script>
-</body>
-</html>
+  <button type="button" onclick="sendSellerInfo()">Submit Seller Info</button>
+</form>
