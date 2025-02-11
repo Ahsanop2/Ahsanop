@@ -2,7 +2,7 @@
 function sendToWhatsApp(formId, type) {
   const form = document.getElementById(formId);
   const inputs = form.querySelectorAll("input, textarea");
-  let message = `${type} Form Submission:\n`;
+  let message = `${type} Form Submission:\n\n`;
 
   for (let input of inputs) {
     let label = input.previousElementSibling.innerText;
@@ -11,15 +11,17 @@ function sendToWhatsApp(formId, type) {
       alert("Please fill out all the fields.");
       return;
     }
-    message += `*${label}* ${value}\n`; // Formatting text with asterisks for bold
+    message += `📌 *${label}* ${value}\n`; // WhatsApp message formatting
   }
 
-  // Encoding the message for URL
+  // Encode message for URL
   let encodedMessage = encodeURIComponent(message);
 
-  // Correct WhatsApp number format with +92 (Pakistan) code
-  let whatsappURL = `https://wa.me/03182898491?text=${encodedMessage}`;
-  window.open(whatsappURL, "_blank");
+  // WhatsApp Number (Pakistan format)
+  let whatsappURL = `https://wa.me/923182898491?text=${encodedMessage}`;
+
+  // Redirect to WhatsApp
+  window.location.href = whatsappURL;
 }
 
 // Seller Form Submission
