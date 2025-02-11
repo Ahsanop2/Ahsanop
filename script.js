@@ -17,11 +17,11 @@ function sendToWhatsApp(formId, type) {
   // Encode message for URL
   let encodedMessage = encodeURIComponent(message);
 
-  // WhatsApp Number (Pakistan format)
-  let whatsappURL = `https://wa.me/923182898491?text=${encodedMessage}`;
+  // WhatsApp Number (Pakistan Format)
+  let whatsappURL = `https://api.whatsapp.com/send?phone=923182898491&text=${encodedMessage}`;
 
-  // Redirect to WhatsApp
-  window.location.href = whatsappURL;
+  // Open WhatsApp via direct link
+  window.open(whatsappURL, "_blank");
 }
 
 // Seller Form Submission
