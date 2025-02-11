@@ -2,7 +2,7 @@
 function sendToWhatsApp(formId, type) {
   const form = document.getElementById(formId);
   const inputs = form.querySelectorAll("input, textarea");
-  let message = `${type} Form Submission:%0A`;
+  let message = `${type} Form Submission:\n`;
 
   for (let input of inputs) {
     let label = input.previousElementSibling.innerText;
@@ -11,11 +11,14 @@ function sendToWhatsApp(formId, type) {
       alert("Please fill out all the fields.");
       return;
     }
-    message += `${label} ${value}%0A`;
+    message += `*${label}* ${value}\n`; // Formatting text with asterisks for bold
   }
 
+  // Encoding the message for URL
+  let encodedMessage = encodeURIComponent(message);
+
   // WhatsApp number
-  let whatsappURL = `https://wa.me/923182898491?text=${message}`;
+  let whatsappURL = `https://wa.me/923182898491?text=${encodedMessage}`;
   window.open(whatsappURL, "_blank");
 }
 
