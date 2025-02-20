@@ -8,21 +8,18 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center/cover;
-      color: white;
+      background-color: #f2f2f2;
     }
     .container {
       max-width: 600px;
       margin: 50px auto;
-      background: rgba(0, 0, 0, 0.8);
+      background: #fff;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       direction: rtl;
     }
     h1 {
       text-align: center;
-      color: #FFD700;
     }
     form {
       display: flex;
@@ -36,11 +33,9 @@
       padding: 10px;
       margin-top: 5px;
       margin-bottom: 10px;
-      border: 1px solid #FFD700;
+      border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
-      background: black;
-      color: white;
     }
     button {
       padding: 15px;
@@ -59,17 +54,17 @@
       font-size: 16px;
       text-align: center;
     }
-    .live-chat a {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0084FF;
+    .live-chat button {
+      background-color: #007bff;
       color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
     }
-    .live-chat a:hover {
-      background: #005BB5;
+    .live-chat button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -106,8 +101,7 @@
   <p>Report Issue: ahsanop32577@gmail.com</p>
 </div>
 <div class="live-chat">
-  <p><strong>Live Chat Support:</strong></p>
-  <a href="https://tawk.to/chat/67b6a21fc40f8019542bbaef/default" target="_blank">Chat Now</a>
+  <button onclick="openLiveChat()">Live Chat</button>
 </div>
 
   </div>  <script>
@@ -128,8 +122,10 @@
     
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      
       var option = document.getElementById('option').value;
       var message = "Option: " + option + "\n";
+      
       if(option === 'sale'){
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
@@ -141,9 +137,14 @@
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
+      
       var phoneNumber = "923182898491";
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank");
     });
-  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script async src="https://embed.tawk.to/67b6a21fc40f8019542bbaef/default" charset="UTF-8" crossorigin="*"></script></body>
+    
+    function openLiveChat() {
+      window.open('https://tawk.to/chat/67b6a21fc40f8019542bbaef', '_blank');
+    }
+  </script></body>
 </html>
