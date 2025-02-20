@@ -8,20 +8,20 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
+      background-color: #121212;
+      color: #ffffff;
+      text-align: center;
     }
     .container {
       max-width: 600px;
       margin: 50px auto;
-      background: #fff;
+      background: #1e1e1e;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      direction: rtl;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      border-radius: 10px;
     }
     h1 {
-      text-align: center;
-      color: #25d366;
+      color: #ffcc00;
     }
     form {
       display: flex;
@@ -29,17 +29,18 @@
     }
     label {
       margin-top: 10px;
-      font-weight: bold;
-      color: #555;
+      color: #ffcc00;
     }
     input, select, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
       margin-bottom: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #ffcc00;
       border-radius: 4px;
       font-size: 16px;
+      background: #333;
+      color: white;
     }
     button {
       padding: 15px;
@@ -56,20 +57,11 @@
     .payment, .report, .live-chat {
       margin-top: 20px;
       font-size: 16px;
-      text-align: center;
-      font-weight: bold;
     }
     .live-chat a {
-      display: inline-block;
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
+      color: #25d366;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .live-chat a:hover {
-      background-color: #0056b3;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -103,10 +95,10 @@
   <p>Payment Options: Easypaisa - 03448089399</p>
 </div>
 <div class="report">
-  <p>Report Issue: ahsanop32577@gmail.com</p>
+  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
 </div>
 <div class="live-chat">
-  <a href="#" onclick="openTawkChat()">Live Chat</a>
+  <p><a href="#" onclick="toggleLiveChat()">Live Chat</a></p>
 </div>
 
   </div>  <script>
@@ -127,6 +119,7 @@
     
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      
       var option = document.getElementById('option').value;
       var message = "Option: " + option + "\n";
       
@@ -141,9 +134,13 @@
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
+      
+      var phoneNumber = "923182898491";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
     });
     
-    function openTawkChat() {
+    function toggleLiveChat() {
       Tawk_API.toggle();
     }
   </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
@@ -151,7 +148,7 @@
     (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
       s1.async=true;
-      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/default';
+      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/1hnm1bn7a';
       s1.charset='UTF-8';
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
