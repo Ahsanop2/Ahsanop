@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ur">
-<head>
+<!DOCTYPE html><html lang="ur"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Fire ID Sale, Buy & Exchange</title>
@@ -59,10 +58,16 @@
       margin-top: 20px;
       font-size: 16px;
     }
-    .live-chat a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
+    .live-chat button {
+      background-color: #007bff;
+      padding: 10px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .live-chat button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -89,18 +94,17 @@
         <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
       </div>
       <button type="submit">Submit</button>
-    </form>
-    <div class="payment">
-      <p>Payment Options: Easypaisa - 03448089399</p>
-    </div>
-    <div class="report">
-      <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
-    </div>
-    <div class="live-chat">
-      <p><a href="#" onclick="toggleLiveChat()">Live Chat</a></p>
-    </div>
-  </div>
-  <script>
+    </form><div class="payment">
+  <p>Payment Options: Easypaisa - 03448089399</p>
+</div>
+<div class="report">
+  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+</div>
+<div class="live-chat">
+  <button onclick="toggleLiveChat()">Live Chat</button>
+</div>
+
+  </div>  <script>
     document.getElementById('option').addEventListener('change', function() {
       var saleFields = document.getElementById('saleFields');
       var buyFields = document.getElementById('buyFields');
@@ -115,10 +119,13 @@
         buyFields.style.display = 'none';
       }
     });
+    
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      
       var option = document.getElementById('option').value;
       var message = "Option: " + option + "\n";
+      
       if(option === 'sale'){
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
@@ -130,15 +137,18 @@
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
+      
       var phoneNumber = "923182898491";
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank");
     });
+    
     function toggleLiveChat() {
-      Tawk_API.toggle();
+      if (typeof Tawk_API !== 'undefined') {
+        Tawk_API.toggle();
+      }
     }
-  </script>
-  <script>
+  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -148,6 +158,5 @@
       s1.setAttribute('crossorigin','*');
       s0.parentNode.insertBefore(s1,s0);
     })();
-  </script>
-</body>
+  </script></body>
 </html>
