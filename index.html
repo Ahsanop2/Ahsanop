@@ -57,10 +57,9 @@
     .payment, .report, .helpline {
       margin-top: 20px;
       font-size: 16px;
-      color: #00ffcc;
     }
-    .helpline a, .report a {
-      color: #ffcc00;
+    .helpline a {
+      color: #25d366;
       text-decoration: none;
       font-weight: bold;
     }
@@ -75,34 +74,32 @@
         <option value="">--Option chunain--</option>
         <option value="sale">Sale</option>
         <option value="buy">Buy</option>
-      </select><div id="saleFields" style="display: none;">
-    <label for="level">ID Level:</label>
-    <input type="number" id="level" name="level" placeholder="ID Level" min="0">
-    <label for="evo">Evo Kitne hain:</label>
-    <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
-    <label for="linked">Linked kis per hai:</label>
-    <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
+      </select>
+      <div id="saleFields" style="display: none;">
+        <label for="level">ID Level:</label>
+        <input type="number" id="level" name="level" placeholder="ID Level" min="0">
+        <label for="evo">Evo Kitne hain:</label>
+        <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
+        <label for="linked">Linked kis per hai:</label>
+        <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
+      </div>
+      <div id="buyFields" style="display: none;">
+        <label for="buyDetails">Buy Details:</label>
+        <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="payment">
+      <p>Payment Options: Easypaisa - 03448089399</p>
+    </div>
+    <div class="report">
+      <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+    </div>
+    <div class="helpline">
+      <p><a href="#" onclick="Tawk_API.toggle();">Helpline (Live Chat)</a></p>
+    </div>
   </div>
-  
-  <div id="buyFields" style="display: none;">
-    <label for="buyDetails">Buy Details:</label>
-    <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
-  </div>
-  
-  <button type="submit">Submit</button>
-</form>
-
-<div class="payment">
-  <p>Payment Options: <span style="color:#ffcc00;">Easypaisa - 03448089399</span></p>
-</div>
-<div class="report">
-  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
-</div>
-<div class="helpline">
-  <p><a href="#" onclick="toggleLiveChat()">Helpline (Live Chat)</a></p>
-</div>
-
-  </div>  <script>
+  <script>
     document.getElementById('option').addEventListener('change', function() {
       var saleFields = document.getElementById('saleFields');
       var buyFields = document.getElementById('buyFields');
@@ -117,13 +114,10 @@
         buyFields.style.display = 'none';
       }
     });
-    
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       var option = document.getElementById('option').value;
       var message = "Option: " + option + "\n";
-      
       if(option === 'sale'){
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
@@ -135,24 +129,12 @@
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
-      
       var phoneNumber = "923182898491";
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank");
     });
-    
-    function toggleLiveChat() {
-      Tawk_API.toggle();
-    }
-  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/1hnm1bn7a';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script></body>
+  </script>
+  <!-- Live Chat Widget (Tawk.to) -->
+  <script async src="https://embed.tawk.to/67b6a21fc40f8019542bbaef/1hnm1bn7a" charset="UTF-8" crossorigin="*"></script>
+</body>
 </html>
