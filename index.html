@@ -9,6 +9,7 @@
       margin: 0;
       padding: 0;
       background-color: #f2f2f2;
+      color: #333;
     }
     .container {
       max-width: 600px;
@@ -20,6 +21,7 @@
     }
     h1 {
       text-align: center;
+      color: #25d366;
     }
     form {
       display: flex;
@@ -27,6 +29,8 @@
     }
     label {
       margin-top: 10px;
+      font-weight: bold;
+      color: #555;
     }
     input, select, textarea {
       width: 100%;
@@ -53,17 +57,18 @@
       margin-top: 20px;
       font-size: 16px;
       text-align: center;
+      font-weight: bold;
     }
-    .live-chat button {
+    .live-chat a {
+      display: inline-block;
       background-color: #007bff;
       color: white;
       padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
     }
-    .live-chat button:hover {
+    .live-chat a:hover {
       background-color: #0056b3;
     }
   </style>
@@ -101,7 +106,7 @@
   <p>Report Issue: ahsanop32577@gmail.com</p>
 </div>
 <div class="live-chat">
-  <button onclick="openLiveChat()">Live Chat</button>
+  <a href="#" onclick="openTawkChat()">Live Chat</a>
 </div>
 
   </div>  <script>
@@ -122,7 +127,6 @@
     
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       var option = document.getElementById('option').value;
       var message = "Option: " + option + "\n";
       
@@ -137,14 +141,20 @@
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
-      
-      var phoneNumber = "923182898491";
-      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
     });
     
-    function openLiveChat() {
-      window.open('https://tawk.to/chat/67b6a21fc40f8019542bbaef', '_blank');
+    function openTawkChat() {
+      Tawk_API.toggle();
     }
+  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script></body>
 </html>
