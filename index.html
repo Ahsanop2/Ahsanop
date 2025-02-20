@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ur">
+<!DOCTYPE html><html lang="ur">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +8,18 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url("https://i.imgur.com/LUtPYua.jpeg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: #f2f2f2;
     }
     .container {
       max-width: 600px;
-      background: rgba(0, 0, 0, 0.8);
+      margin: 50px auto;
+      background: #fff;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: white;
       direction: rtl;
-      border-radius: 10px;
     }
     h1 {
       text-align: center;
-      color: #ffcc00;
     }
     form {
       display: flex;
@@ -75,45 +65,31 @@
         <option value="">--Option chunain--</option>
         <option value="sale">Sale</option>
         <option value="buy">Buy</option>
-      </select>
-      
-      <!-- Sale option ke liye fields -->
-      <div id="saleFields" style="display: none;">
-        <label for="level">ID Level (Lvl kitna ha):</label>
-        <input type="number" id="level" name="level" placeholder="ID Level" min="0">
-        
-        <label for="evo">Evo kitne ha:</label>
-        <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
-        
-        <label for="linked">Linked Account (Or Linked kisper ha):</label>
-        <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
-        
-        <label for="ranks">Rengs kitnaa ha:</label>
-        <input type="text" id="ranks" name="ranks" placeholder="ID Ranks">
-        
-        <label for="idType">Kis type ki ID chahye:</label>
-        <input type="text" id="idType" name="idType" placeholder="e.g., Classic, Evo, etc.">
-      </div>
-      
-      <!-- Buy option ke liye fields -->
-      <div id="buyFields" style="display: none;">
-        <label for="buyDetails">Buy Details:</label>
-        <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
-      </div>
-      
-      <button type="submit">Submit</button>
-    </form>
-    
-    <div class="payment">
-      <p>Payment Options: Easypaisa - 03448089399</p>
-    </div>
-    <div class="report">
-      <p>Report Issue: ahsanop32577@gmail.com</p>
-    </div>
+      </select><div id="saleFields" style="display: none;">
+    <label for="level">ID Level:</label>
+    <input type="number" id="level" name="level" placeholder="ID Level" min="0">
+    <label for="evo">Evo Kitne hain:</label>
+    <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
+    <label for="linked">Linked kis per hai:</label>
+    <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
   </div>
   
-  <script>
-    // Option select hone par fields dikhane ke liye
+  <div id="buyFields" style="display: none;">
+    <label for="buyDetails">Buy Details:</label>
+    <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
+  </div>
+  
+  <button type="submit">Submit</button>
+</form>
+
+<div class="payment">
+  <p>Payment Options: Easypaisa - 03448089399</p>
+</div>
+<div class="report">
+  <p>Report Issue: ahsanop32577@gmail.com</p>
+</div>
+
+  </div>  <script>
     document.getElementById('option').addEventListener('change', function() {
       var saleFields = document.getElementById('saleFields');
       var buyFields = document.getElementById('buyFields');
@@ -129,7 +105,6 @@
       }
     });
     
-    // Form submit hone par WhatsApp redirect
     document.getElementById('idForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -140,23 +115,27 @@
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
         var linked = document.getElementById('linked').value;
-        var ranks = document.getElementById('ranks').value;
-        var idType = document.getElementById('idType').value;
         message += "Level: " + level + "\n";
         message += "Evo: " + evo + "\n";
         message += "Linked: " + linked + "\n";
-        message += "Rengs: " + ranks + "\n";
-        message += "ID Type: " + idType + "\n";
       } else if(option === 'buy'){
         var buyDetails = document.getElementById('buyDetails').value;
         message += "Buy Details: " + buyDetails + "\n";
       }
       
-      // WhatsApp par redirect hone ka URL
       var phoneNumber = "923182898491";
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank");
     });
-  </script>
-</body>
+  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script></body>
 </html>
