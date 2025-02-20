@@ -1,38 +1,46 @@
-// Function to send form data to WhatsApp
-function sendToWhatsApp(formId, type) {
-  const form = document.getElementById(formId);
-  const inputs = form.querySelectorAll("input, textarea");
-  let message = `${type} Form Submission:\n\n`;
+// script.js
 
-  for (let input of inputs) {
-    // Assume label is the previous sibling element
-    let label = input.previousElementSibling ? input.previousElementSibling.innerText : "";
-    let value = input.value.trim();
-    if (!value) {
-      alert("Please fill out all the fields.");
-      return;
-    }
-    message += `📌 *${label}* ${value}\n`;
+// Dropdown select hone par sale ya buy ke fields show/hide karne ke liye
+document.getElementById('option').addEventListener('change', function() {
+  var saleFields = document.getElementById('saleFields');
+  var buyFields = document.getElementById('buyFields');
+  if (this.value === 'sale') {
+    saleFields.style.display = 'block';
+    buyFields.style.display = 'none';
+  } else if (this.value === 'buy') {
+    saleFields.style.display = 'none';
+    buyFields.style.display = 'block';
+  } else {
+    saleFields.style.display = 'none';
+    buyFields.style.display = 'none';
   }
-
-  // Encode message for URL
-  let encodedMessage = encodeURIComponent(message);
-
-  // WhatsApp Number (Pakistan Format) remains same
-  let whatsappURL = `https://api.whatsapp.com/send?phone=923182898491&text=${encodedMessage}`;
-
-  // Open WhatsApp via direct link
-  window.open(whatsappURL, "_blank");
-}
-
-// Seller Form Submission
-document.getElementById("sellerForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  sendToWhatsApp("sellerForm", "Seller");
 });
 
-// Buyer Form Submission
-document.getElementById("buyerForm").addEventListener("submit", function (e) {
+// Form submit hone par WhatsApp redirect
+document.getElementById('idForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  sendToWhatsApp("buyerForm", "Buyer");
+  
+  var option = document.getElementById('option').value;
+  var message = "Option: " + option + "\n";
+  
+  if(option === 'sale'){
+    var level = document.getElementById('level').value;
+    var evo = document.getElementById('evo').value;
+    var linked = document.getElementById('linked').value;
+    var ranks = document.getElementById('ranks').value;
+    var idType = document.getElementById('idType').value;
+    message += "Level: " + level + "\n";
+    message += "Evo: " + evo + "\n";
+    message += "Linked: " + linked + "\n";
+    message += "Rengs: " + ranks + "\n";
+    message += "ID Type: " + idType + "\n";
+  } else if(option === 'buy'){
+    var buyDetails = document.getElementById('buyDetails').value;
+    message += "Buy Details: " + buyDetails + "\n";
+  }
+  
+  // WhatsApp redirect ka URL
+  var phoneNumber = "923182898491";
+  var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
 });
