@@ -8,9 +8,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center/cover;
+      color: white;
     }
     .container {
       max-width: 600px;
@@ -18,27 +17,30 @@
       background: rgba(0, 0, 0, 0.8);
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      border-radius: 8px;
       direction: rtl;
-      border-radius: 10px;
     }
     h1 {
       text-align: center;
-      color: #25d366;
+      color: #FFD700;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
     }
     label {
-      color: #25d366;
-      font-weight: bold;
+      margin-top: 10px;
     }
     input, select, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
       margin-bottom: 10px;
-      border: 1px solid #25d366;
+      border: 1px solid #FFD700;
       border-radius: 4px;
       font-size: 16px;
-      background: #000;
-      color: #fff;
+      background: black;
+      color: white;
     }
     button {
       padding: 15px;
@@ -52,10 +54,22 @@
     button:hover {
       background-color: #1ebe57;
     }
-    .payment, .report {
+    .payment, .report, .live-chat {
       margin-top: 20px;
       font-size: 16px;
       text-align: center;
+    }
+    .live-chat a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0084FF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .live-chat a:hover {
+      background: #005BB5;
     }
   </style>
 </head>
@@ -90,6 +104,10 @@
 </div>
 <div class="report">
   <p>Report Issue: ahsanop32577@gmail.com</p>
+</div>
+<div class="live-chat">
+  <p><strong>Live Chat Support:</strong></p>
+  <a href="https://tawk.to/chat/67b6a21fc40f8019542bbaef/default" target="_blank">Chat Now</a>
 </div>
 
   </div>  <script>
@@ -127,15 +145,5 @@
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank");
     });
-  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script></body>
+  </script>  <!-- Live Chat Widget (Tawk.to) -->  <script async src="https://embed.tawk.to/67b6a21fc40f8019542bbaef/default" charset="UTF-8" crossorigin="*"></script></body>
 </html>
