@@ -74,21 +74,21 @@
     <form id="idForm">
       <label for="option">آپشن منتخب کریں (فروخت/خرید):</label>
       <select id="option" name="option" required>
-        <option value="">--آپشن منتخب کریں--</option>
-        <option value="sale">فروخت</option>
-        <option value="buy">خرید</option>
+        <option value="">--Option chunein--</option>
+        <option value="sale">sale</option>
+        <option value="buy">buy</option>
       </select>
       <div id="saleFields" style="display: none;">
-        <label for="level">لیول:</label>
-        <input type="number" id="level" name="level" placeholder="لیول" min="1">
-        <label for="evo">ایووز کی تعداد:</label>
-        <input type="number" id="evo" name="evo" placeholder="ایووز کی تعداد" min="0">
-        <label for="linked">کس سے منسلک ہے:</label>
-        <input type="text" id="linked" name="linked" placeholder="مثال: فیس بک، گوگل">
+        <label for="level">levl:</label>
+        <input type="number" id="level" name="level" placeholder="level" min="1">
+        <label for="evo">evos تعداد:</label>
+        <input type="number" id="evo" name="evo" placeholder="evos kitne ha" min="0">
+        <label for="linked" linkkisper ha:</label>
+        <input type="text" id="linked" name="linked" placeholder="jaise fb ya google">
       </div>
       <div id="buyFields" style="display: none;">
-        <label for="buyDetails">خرید کی تفصیلات:</label>
-        <textarea id="buyDetails" name="buyDetails" placeholder="آئی ڈی خرید سے متعلق تفصیلات یہاں لکھیں" rows="4"></textarea>
+        <label for="buyDetails"id Buy ki detail :</label>
+        <textarea id="buyDetails" name="buyDetails" placeholder="apko kaisa id Chahye Uski Detail bheje" rows="4"></textarea>
       </div>
       <button type="submit">جمع کریں</button>
     </form>
@@ -126,12 +126,12 @@
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
         var linked = document.getElementById('linked').value;
-        if (level) message += "لیول: " + level + "\n";
-        if (evo) message += "ایووز: " + evo + "\n";
+        if (level) message += "level: " + level + "\n";
+        if (evo) message += "evos: " + evo + "\n";
         if (linked) message += "منسلک: " + linked + "\n";
       } else if (option === 'buy') {
         var buyDetails = document.getElementById('buyDetails').value;
-        if (buyDetails) message += "خرید کی تفصیلات: " + buyDetails + "\n";
+        if (buyDetails) message += "kesa id uski kuch info de: " + buyDetails + "\n";
       }
       var phoneNumber = "923182898491";
       var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
