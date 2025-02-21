@@ -77,7 +77,9 @@
       </select><div id="saleFields" style="display: none;">
     <label for="level">ID Level:</label>
     <input type="number" id="level" name="level" placeholder="ID Level" min="0">
-    <label for="evo">Evo Kitne hain:</label>
+ <label for="evo">Price fix Kitna hai:</label>
+    <input type="number" id="Price" name="Price" placeholder="Price fix" min="0">
+    <label for="evo">evos Kitne hain:</label>
     <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
     <label for="linked">Linked kis per hai:</label>
     <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
@@ -98,7 +100,7 @@
   <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
 </div>
 <div class="helpline">
-  <p><a href="#" onclick="Tawk_API.toggle(); return false;">Helpline (Live Chat)</a></p>
+  <p><a href="#" onclick="Tawk_API.toggle(); return false;"> (HELP LINE)</a></p>
 </div>
 
   </div>  <script>
@@ -127,6 +129,8 @@
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
         var linked = document.getElementById('linked').value;
+        message += "price: " + evo +
+
         message += "Level: " + level + "\n";
         message += "Evo: " + evo + "\n";
         message += "Linked: " + linked + "\n";
