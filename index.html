@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="ur"><head>
+<!DOCTYPE html>
+<html lang="ur">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Fire ID Sale, Buy & Exchange</title>
@@ -7,14 +9,15 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
+      background-size: cover;
       color: #ffffff;
       text-align: center;
     }
     .container {
       max-width: 600px;
       margin: 50px auto;
-      background: #1e1e1e;
+      background: rgba(30, 30, 30, 0.9);
       padding: 20px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       border-radius: 10px;
@@ -73,26 +76,42 @@
         <option value="">--Option chunain--</option>
         <option value="sale">Sale</option>
         <option value="buy">Buy</option>
-      </select><div id="saleFields" style="display: none;">
-    <input type="number" id="Price" name="Price" placeholder="Price fix" min="0">
-    <label for="evo">evos Kitne hain:</label>
-    <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
-    <label for="linked">Linked kis per hai:</label>
-    <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
-  </div>  <div id="buyFields" style="display: none;">
-    <label for="buyDetails">Buy Details:</label>
-    <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
-  </div><button type="submit">Submit</button>
+      </select>
 
-</form><div class="payment">
-  <p>Payment Options: Easypaisa - 03448089399</p>
-</div>
-<div class="report">
-  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
-</div>
-<div class="helpline">
-  <p><a href="#" onclick="Tawk_API.toggle(); return false;"> (HELP LINE)</a></p>
-</div>  </div>  <script>
+      <div id="saleFields" style="display: none;">
+        <label for="Price">قیمت درج کریں:</label>
+        <input type="number" id="Price" name="Price" placeholder="Price fix" min="0">
+        
+        <label for="level">لیول درج کریں:</label>
+        <input type="number" id="level" name="level" placeholder="Level" min="0">
+        
+        <label for="evo">evos Kitne hain:</label>
+        <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
+        
+        <label for="linked">Linked kis per hai:</label>
+        <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
+      </div>
+
+      <div id="buyFields" style="display: none;">
+        <label for="buyDetails">Buy Details:</label>
+        <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="payment">
+      <p>Payment Options: Easypaisa - 03448089399</p>
+    </div>
+    <div class="report">
+      <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+    </div>
+    <div class="helpline">
+      <p><a href="#" onclick="Tawk_API.toggle(); return false;"> (HELP LINE)</a></p>
+    </div>
+  </div>
+
+  <script>
     document.getElementById('option').addEventListener('change', function() {
       var saleFields = document.getElementById('saleFields');
       var buyFields = document.getElementById('buyFields');
@@ -106,30 +125,47 @@
         saleFields.style.display = 'none';
         buyFields.style.display = 'none';
       }
-    });document.getElementById('idForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  var option = document.getElementById('option').value;
-  var message = "Option: " + option + "\n";
-  
-  if(option === 'sale'){
-    var level = document.getElementById('level').value;
-    var evo = document.getElementById('evo').value;
-    var linked = document.getElementById('linked').value;
+    });
 
-    message += "Level: " + level + "\n";
-    message += "Evo: " + evo + "\n";
-    message += "Linked: " + linked + "\n";
-  } else if(option === 'buy'){
-    var buyDetails = document.getElementById('buyDetails').value;
-    message += "Buy Details: " + buyDetails + "\n";
-  }
-  
-  var phoneNumber = "923182898491";
-  var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-});
+    document.getElementById('idForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var option = document.getElementById('option').value;
+      var message = "Option: " + option + "\n";
+      
+      if(option === 'sale'){
+        var price = document.getElementById('Price').value;
+        var level = document.getElementById('level').value;
+        var evo = document.getElementById('evo').value;
+        var linked = document.getElementById('linked').value;
 
-</script>  <!-- Live Chat Widget (Tawk.to) -->  <script type="text/javascript"> var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); (function(){ var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0]; s1.async=true; s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/1ikgmijjo'; s1.charset='UTF-8'; s1.setAttribute('crossorigin','*'); s0.parentNode.insertBefore(s1,s0); })(); </script></body>
+        message += "Price: " + price + "\n";
+        message += "Level: " + level + "\n";
+        message += "Evo: " + evo + "\n";
+        message += "Linked: " + linked + "\n";
+      } else if(option === 'buy'){
+        var buyDetails = document.getElementById('buyDetails').value;
+        message += "Buy Details: " + buyDetails + "\n";
+      }
+      
+      var phoneNumber = "923182898491";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    });
+  </script>
 
+  <!-- Live Chat Widget (Tawk.to) -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/1ikgmijjo';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+</body>
 </html>
