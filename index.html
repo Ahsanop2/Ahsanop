@@ -8,28 +8,37 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
-      background-size: cover;
+      background-color: #121212;
       color: #ffffff;
       text-align: center;
     }
     .container {
-      max-width: 600px;
+      max-width: 800px;
       margin: 50px auto;
-      background: rgba(30, 30, 30, 0.9);
+      background: #1e1e1e;
       padding: 20px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       border-radius: 10px;
     }
-    h1 { color: #ff5733; }
-    label { margin-top: 10px; color: #ffcc00; }
-    select, input, textarea {
+    h1 {
+      color: #ff5733;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 10px;
+      color: #ffcc00;
+    }
+    input, select, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
       margin-top: 5px;
       margin-bottom: 10px;
       border: 1px solid #ffcc00;
       border-radius: 4px;
+      font-size: 16px;
       background: #333;
       color: white;
     }
@@ -42,91 +51,65 @@
       cursor: pointer;
       border-radius: 4px;
     }
-    button:hover { background-color: #1ebe57; }
+    button:hover {
+      background-color: #1ebe57;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Free Fire ID Sale, Buy, Exchange & Diamonds</h1><form id="idForm">
-  <label for="option">Option select karein:</label>
-  <select id="option" name="option" required>
-    <option value="">--Option chunain--</option>
-    <option value="sale">Sale</option>
-    <option value="buy">Buy</option>
-    <option value="exchange">Exchange</option>
-    <option value="diamonds">Diamond Prices</option>
-  </select>
-
-  <div id="saleFields" style="display: none;">
+    <h1>Free Fire ID Sale, Buy, Exchange & Diamonds</h1>
+    <form id="idForm">
+      <label for="option">Option Select Karein:</label>
+      <select id="option" name="option" required>
+        <option value="">--Option Chunain--</option>
+        <option value="sale">Sale</option>
+        <option value="buy">Buy</option>
+        <option value="exchange">Exchange</option>
+        <option value="exchange2">Exchange 2</option>
+      </select><div id="saleFields" style="display: none;">
     <input type="number" id="price" name="price" placeholder="Price Fix" min="0">
+    <input type="number" id="level" name="level" placeholder="Level" min="0">
     <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
-    <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
+    <input type="text" id="linked" name="linked" placeholder="Linked Kis Per Hai (Facebook, Google)">
   </div>
   
   <div id="buyFields" style="display: none;">
-    <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
-  </div>
-
-  <div id="exchangeFields" style="display: none;">
-    <input type="number" id="exLevel" name="exLevel" placeholder="Apka Level Kitna hai">
-    <input type="number" id="exEvo" name="exEvo" placeholder="Apke ID me Evos Kitne hai">
-    <textarea id="exDetails" name="exDetails" placeholder="Apko ID kese chahiye?" rows="4"></textarea>
-    <p><b>Note:</b> Submit button dabane ke baad video WhatsApp par bhej dein.</p>
+    <textarea id="buyDetails" name="buyDetails" placeholder="ID Buy Se Related Details" rows="4"></textarea>
   </div>
   
-  <div id="diamondPrices" style="display: none;">
-    <h3>New Carding Diamonds Offer</h3>
-    <p>RS 1K = DIAMONDS 6500</p>
-    <p>RS 1500 = DIAMONDS 9K</p>
-    <p>RS 2K = DIAMONDS 11500</p>
-    <p>RS 2500 = DIAMONDS 13700</p>
-    <p>RS 3K = DIAMONDS 15000</p>
-    <button type="button" onclick="buyDiamonds()">Buy Diamonds</button>
+  <div id="exchangeFields" style="display: none;">
+    <input type="number" id="exLevel" name="exLevel" placeholder="Apka Level Kitna Hai?" min="0">
+    <input type="number" id="exEvo" name="exEvo" placeholder="Apke ID Me Kitne Evos Hain?" min="0">
+    <textarea id="exDetails" name="exDetails" placeholder="Apko ID Kese Chahiye?" rows="4"></textarea>
   </div>
-
+  
   <button type="submit">Submit</button>
 </form>
 
+<h2>Diamond Prices</h2>
+<p>1K = 6500💎 | 1.5K = 9K💎 | 2K = 11.5K💎 | 2.5K = 13.7K💎</p>
+<p>3K = 15K💎 | 3.3K = 15.7K💎 | 3.5K = 16.3K💎 | 4K = 16.8K💎</p>
+<p>4.5K = 17.5K💎 | 5K = 18.5K💎 | 5.5K = 19.3K💎 | 6K = 20K💎</p>
+<p>7.5K = 20.8K💎 | 8K = 21K💎 | 8.5K = 21.7K💎 | 9K = 22.5K💎</p>
+<p>9.7K = 23K💎</p>
+<button onclick="window.location.href='https://wa.me/923182898491?text=Diamond Buyer'">Buy Diamonds</button>
+
+<div class="payment">
+  <p>Payment: Easypaisa - 03448089399</p>
+</div>
+<div class="report">
+  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+</div>
+<div class="helpline">
+  <p><a href="#" onclick="Tawk_API.toggle(); return false;">(HELP LINE)</a></p>
+</div>
+
   </div>  <script>
     document.getElementById('option').addEventListener('change', function() {
-      var saleFields = document.getElementById('saleFields');
-      var buyFields = document.getElementById('buyFields');
-      var exchangeFields = document.getElementById('exchangeFields');
-      var diamondPrices = document.getElementById('diamondPrices');
-      
-      saleFields.style.display = this.value === 'sale' ? 'block' : 'none';
-      buyFields.style.display = this.value === 'buy' ? 'block' : 'none';
-      exchangeFields.style.display = this.value === 'exchange' ? 'block' : 'none';
-      diamondPrices.style.display = this.value === 'diamonds' ? 'block' : 'none';
+      document.getElementById('saleFields').style.display = this.value === 'sale' ? 'block' : 'none';
+      document.getElementById('buyFields').style.display = this.value === 'buy' ? 'block' : 'none';
+      document.getElementById('exchangeFields').style.display = this.value === 'exchange' || this.value === 'exchange2' ? 'block' : 'none';
     });
-    
-    document.getElementById('idForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var option = document.getElementById('option').value;
-      var message = "Option: " + option + "\n";
-      var phoneNumber = "923182898491";
-      
-      if(option === 'sale'){
-        message += "Price: " + document.getElementById('price').value + "\n";
-        message += "Evo: " + document.getElementById('evo').value + "\n";
-        message += "Linked: " + document.getElementById('linked').value + "\n";
-      } else if(option === 'buy') {
-        message += "Buy Details: " + document.getElementById('buyDetails').value + "\n";
-      } else if(option === 'exchange') {
-        message += "Level: " + document.getElementById('exLevel').value + "\n";
-        message += "Evo: " + document.getElementById('exEvo').value + "\n";
-        message += "Details: " + document.getElementById('exDetails').value + "\n";
-      }
-      
-      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
-    });
-    
-    function buyDiamonds() {
-      var phoneNumber = "923182898491";
-      var message = "Mujhe Free Fire Diamonds kharidne hain. Mazid tafsilat bata dein.";
-      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank");
-    }
   </script></body>
 </html>
