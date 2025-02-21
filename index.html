@@ -75,9 +75,6 @@
         <option value="sale">Sale</option>
         <option value="buy">Buy</option>
       </select><div id="saleFields" style="display: none;">
-    <label for="level">ID Level:</label>
-    <input type="number" id="level" name="level" placeholder="ID Level" min="0">
- <label for="evo">Price fix Kitna hai:</label>
     <input type="number" id="Price" name="Price" placeholder="Price fix" min="0">
     <label for="evo">evos Kitne hain:</label>
     <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
@@ -129,7 +126,6 @@
         var level = document.getElementById('level').value;
         var evo = document.getElementById('evo').value;
         var linked = document.getElementById('linked').value;
-        message += "price: " + evo +
 
         message += "Level: " + level + "\n";
         message += "Evo: " + evo + "\n";
