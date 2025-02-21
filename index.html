@@ -1,21 +1,23 @@
-<!DOCTYPE html><html lang="ur">
+<!DOCTYPE html>
+<html lang="ur">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Fire ID Sale, Buy, Exchange & Diamonds</title>
+  <title>Free Fire ID Sale, Buy & Exchange</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #121212;
+      background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
+      background-size: cover;
       color: #ffffff;
       text-align: center;
     }
     .container {
-      max-width: 800px;
+      max-width: 600px;
       margin: 50px auto;
-      background: #1e1e1e;
+      background: rgba(30, 30, 30, 0.9);
       padding: 20px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       border-radius: 10px;
@@ -33,7 +35,7 @@
     }
     input, select, textarea {
       width: 100%;
-      padding: 15px;
+      padding: 10px;
       margin-top: 5px;
       margin-bottom: 10px;
       border: 1px solid #ffcc00;
@@ -54,62 +56,116 @@
     button:hover {
       background-color: #1ebe57;
     }
+    .payment, .report, .helpline {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .helpline a {
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Free Fire ID Sale, Buy, Exchange & Diamonds</h1>
+    <h1>Free Fire ID Sale, Buy & Exchange</h1>
     <form id="idForm">
-      <label for="option">Option Select Karein:</label>
+      <label for="option">Option select karein (Sale/Buy):</label>
       <select id="option" name="option" required>
-        <option value="">--Option Chunain--</option>
+        <option value="">--Option chunain--</option>
         <option value="sale">Sale</option>
         <option value="buy">Buy</option>
-        <option value="exchange">Exchange</option>
-        <option value="exchange2">Exchange 2</option>
-      </select><div id="saleFields" style="display: none;">
-    <input type="number" id="price" name="price" placeholder="Price Fix" min="0">
-    <input type="number" id="level" name="level" placeholder="Level" min="0">
-    <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
-    <input type="text" id="linked" name="linked" placeholder="Linked Kis Per Hai (Facebook, Google)">
-  </div>
-  
-  <div id="buyFields" style="display: none;">
-    <textarea id="buyDetails" name="buyDetails" placeholder="ID Buy Se Related Details" rows="4"></textarea>
-  </div>
-  
-  <div id="exchangeFields" style="display: none;">
-    <input type="number" id="exLevel" name="exLevel" placeholder="Apka Level Kitna Hai?" min="0">
-    <input type="number" id="exEvo" name="exEvo" placeholder="Apke ID Me Kitne Evos Hain?" min="0">
-    <textarea id="exDetails" name="exDetails" placeholder="Apko ID Kese Chahiye?" rows="4"></textarea>
-  </div>
-  
-  <button type="submit">Submit</button>
-</form>
+      </select>
 
-<h2>Diamond Prices</h2>
-<p>1K = 6500💎 | 1.5K = 9K💎 | 2K = 11.5K💎 | 2.5K = 13.7K💎</p>
-<p>3K = 15K💎 | 3.3K = 15.7K💎 | 3.5K = 16.3K💎 | 4K = 16.8K💎</p>
-<p>4.5K = 17.5K💎 | 5K = 18.5K💎 | 5.5K = 19.3K💎 | 6K = 20K💎</p>
-<p>7.5K = 20.8K💎 | 8K = 21K💎 | 8.5K = 21.7K💎 | 9K = 22.5K💎</p>
-<p>9.7K = 23K💎</p>
-<button onclick="window.location.href='https://wa.me/923182898491?text=Diamond Buyer'">Buy Diamonds</button>
+      <div id="saleFields" style="display: none;">
+        <label for="Price">قیمت درج کریں:</label>
+        <input type="number" id="Price" name="Price" placeholder="Price fix" min="0">
+        
+        <label for="level">لیول درج کریں:</label>
+        <input type="number" id="level" name="level" placeholder="Level" min="0">
+        
+        <label for="evo">evos Kitne hain:</label>
+        <input type="number" id="evo" name="evo" placeholder="Evo Count" min="0">
+        
+        <label for="linked">Linked kis per hai:</label>
+        <input type="text" id="linked" name="linked" placeholder="Jaise: Facebook, Google">
+      </div>
 
-<div class="payment">
-  <p>Payment: Easypaisa - 03448089399</p>
-</div>
-<div class="report">
-  <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
-</div>
-<div class="helpline">
-  <p><a href="#" onclick="Tawk_API.toggle(); return false;">(HELP LINE)</a></p>
-</div>
+      <div id="buyFields" style="display: none;">
+        <label for="buyDetails">Buy Details:</label>
+        <textarea id="buyDetails" name="buyDetails" placeholder="ID buy se related details yahan likhein" rows="4"></textarea>
+      </div>
 
-  </div>  <script>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="payment">
+      <p>Payment Options: Easypaisa - 03448089399</p>
+    </div>
+    <div class="report">
+      <p>Report Issue: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+    </div>
+    <div class="helpline">
+      <p><a href="#" onclick="Tawk_API.toggle(); return false;"> (HELP LINE)</a></p>
+    </div>
+  </div>
+
+  <script>
     document.getElementById('option').addEventListener('change', function() {
-      document.getElementById('saleFields').style.display = this.value === 'sale' ? 'block' : 'none';
-      document.getElementById('buyFields').style.display = this.value === 'buy' ? 'block' : 'none';
-      document.getElementById('exchangeFields').style.display = this.value === 'exchange' || this.value === 'exchange2' ? 'block' : 'none';
+      var saleFields = document.getElementById('saleFields');
+      var buyFields = document.getElementById('buyFields');
+      if (this.value === 'sale') {
+        saleFields.style.display = 'block';
+        buyFields.style.display = 'none';
+      } else if (this.value === 'buy') {
+        saleFields.style.display = 'none';
+        buyFields.style.display = 'block';
+      } else {
+        saleFields.style.display = 'none';
+        buyFields.style.display = 'none';
+      }
     });
-  </script></body>
+
+    document.getElementById('idForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var option = document.getElementById('option').value;
+      var message = "Option: " + option + "\n";
+      
+      if(option === 'sale'){
+        var price = document.getElementById('Price').value;
+        var level = document.getElementById('level').value;
+        var evo = document.getElementById('evo').value;
+        var linked = document.getElementById('linked').value;
+
+        message += "Price: " + price + "\n";
+        message += "Level: " + level + "\n";
+        message += "Evo: " + evo + "\n";
+        message += "Linked: " + linked + "\n";
+      } else if(option === 'buy'){
+        var buyDetails = document.getElementById('buyDetails').value;
+        message += "Buy Details: " + buyDetails + "\n";
+      }
+      
+      var phoneNumber = "923182898491";
+      var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    });
+  </script>
+
+  <!-- Live Chat Widget (Tawk.to) -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/67b6a21fc40f8019542bbaef/1ikgmijjo';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+</body>
 </html>
